@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import InquiryBar from "@/components/InquiryBar";
+import SolutionsTicker from "@/components/SolutionsTicker"; // استدعاء الشريط المتحرك
 import { MessageCircle, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // ستارة سوداء تختفي بسلاسة بعد ثانيتين لتفتح الموقع كأنه سينما
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1200);
@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[700px] flex flex-col justify-between px-6 sm:px-12 lg:px-20 py-4 overflow-hidden bg-[#070B14]">
       
-      {/* ستارة البداية السينمائية (تتحرك للأعلى وتختفي بانسيابية) */}
+      {/* ستارة البداية السينمائية */}
       {isLoading && (
         <motion.div 
           initial={{ y: 0, opacity: 1 }}
@@ -98,11 +98,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="relative z-20 w-full flex justify-center pb-1">
-        <div className="w-5 h-8 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
-          <div className="w-1 h-2 bg-[#D4AF37] rounded-full animate-bounce" />
-        </div>
+      {/* الشريط المتحرك للحلول (مضاف أسفل الزرارين وفوق الـ Footer/Scroll) */}
+      <div className="relative z-20 w-full -mx-6 sm:-mx-12 lg:-mx-20 px-6 sm:px-12 lg:px-20">
+        <SolutionsTicker />
       </div>
 
     </section>
