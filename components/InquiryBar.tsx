@@ -14,60 +14,50 @@ export default function InquiryBar() {
 
   return (
     <motion.div 
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="w-full bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl py-3 px-6 shadow-xl"
->
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 relative z-10">
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="w-full max-w-3xl mx-auto bg-black/30 backdrop-blur-xl border border-white/15 rounded-2xl py-2.5 px-4 sm:px-6 shadow-2xl"
+    >
+      <div className="flex flex-col md:flex-row items-center justify-between gap-3">
         
         {/* Text / Hook */}
-        <div className="text-center lg:text-right space-y-0.5">
-          <div className="inline-flex items-center gap-1.5 text-[#D4AF37] text-[10px] font-bold tracking-widest uppercase">
-            <Sparkles className="w-3 h-3 text-[#D4AF37] animate-spin" /> Priority Inquiry
+        <div className="text-center md:text-right space-y-0.5">
+          <div className="inline-flex items-center gap-1 text-[#D4AF37] text-[9px] font-bold tracking-widest uppercase">
+            <Sparkles className="w-2.5 h-2.5 text-[#D4AF37] animate-spin" /> Priority Inquiry
           </div>
-          <h4 className="text-white font-bold text-xs sm:text-sm font-heading">
-            Looking for custom tensile structures or expert consultation?
+          <h4 className="text-white font-bold text-xs font-heading">
+            Looking for custom tensile structures?
           </h4>
         </div>
 
         {/* Inline Compact Form */}
         {submitted ? (
-          <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-500/20 px-4 py-2 rounded-xl border border-emerald-500/40">
-            <CheckCircle2 className="w-4 h-4" /> Request sent successfully!
+          <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-500/20 px-3 py-1.5 rounded-xl border border-emerald-500/40">
+            <CheckCircle2 className="w-3.5 h-3.5" /> Sent!
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-2 w-full lg:w-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-2 w-full md:w-auto">
             <input 
               required
               type="text"
-              placeholder="Your Name..."
-              className="w-full sm:w-48 bg-black/20 border border-white/20 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all backdrop-blur-md"
+              placeholder="Name..."
+              className="w-full sm:w-36 bg-white/5 border border-white/20 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all backdrop-blur-md"
             />
             <input 
               required
               type="tel"
-              placeholder="Phone Number (+971...)"
-              className="w-full sm:w-48 bg-black/20 border border-white/20 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all backdrop-blur-md"
+              placeholder="+971..."
+              className="w-full sm:w-36 bg-white/5 border border-white/20 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all backdrop-blur-md"
             />
 
-            {/* Heartbeat Pulsing Button */}
             <motion.button 
-              animate={{ 
-                scale: [1, 1.06, 1, 1.04, 1],
-              }}
-              transition={{ 
-                duration: 2.5, 
-                repeat: Infinity, 
-                repeatDelay: 0.5,
-                ease: "easeInOut" 
-              }}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full sm:w-auto px-5 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A880] text-[#070B14] font-black uppercase tracking-wider text-[11px] shadow-lg flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
+              className="w-full sm:w-auto px-4 py-1.5 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A880] text-[#070B14] font-black uppercase tracking-wider text-[10px] shadow-lg flex items-center justify-center gap-1 cursor-pointer whitespace-nowrap"
             >
-              Get Callback <ArrowRight className="w-3 h-3" />
+              Callback <ArrowRight className="w-3 h-3" />
             </motion.button>
           </form>
         )}
