@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const solutions = [
   { name: "Event Tents", img: "https://images.unsplash.com/photo-1478147427282-58a87a120781?w=400&auto=format&fit=crop&q=80" },
   { name: "Exhibition Tents", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop&q=80" },
@@ -20,16 +18,12 @@ const solutions = [
 
 export default function SolutionsTicker() {
   return (
-    <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden py-4 bg-black/60 backdrop-blur-2xl border-y border-white/20 z-20 shadow-2xl">
-      <div className="flex w-max">
-        {/* تكرار العناصر 4 مرات لملء عرض الشاشة بالكامل وبدون أي فراغات */}
-        {[...solutions, ...solutions, ...solutions, ...solutions].map((item, index) => (
-          <motion.div
+    <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden py-4 bg-transparent backdrop-blur-[2px] border-y border-white/10 z-20">
+      <div className="flex w-max animate-marquee">
+        {[...solutions, ...solutions, ...solutions, ...solutions, ...solutions].map((item, index) => (
+          <div
             key={index}
-            initial={{ x: 0 }}
-            animate={{ x: "-100%" }}
-            transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-            className="flex flex-col items-center gap-2 px-5 shrink-0 cursor-pointer group"
+            className="flex flex-col items-center gap-2 px-6 shrink-0 cursor-pointer group"
           >
             <div className="relative w-40 h-24 sm:w-48 sm:h-28 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl group-hover:border-[#D4AF37] transition-all duration-300">
               <img 
@@ -40,10 +34,10 @@ export default function SolutionsTicker() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
-            <span className="text-white text-xs sm:text-sm font-bold tracking-wider font-heading group-hover:text-[#D4AF37] transition-colors whitespace-nowrap text-center">
+            <span className="text-white text-xs sm:text-sm font-bold tracking-wider font-heading group-hover:text-[#D4AF37] transition-colors whitespace-nowrap text-center drop-shadow-md">
               {item.name}
             </span>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
