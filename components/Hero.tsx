@@ -1,12 +1,13 @@
 "use client";
 
+import InquiryBar from "@/components/InquiryBar";
 import { MessageCircle } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[90vh] min-h-[600px] flex flex-col justify-between px-6 sm:px-12 lg:px-20 py-8 overflow-hidden">
+    <section className="relative w-full h-[90vh] min-h-[600px] flex flex-col justify-between px-6 sm:px-12 lg:px-20 py-6 overflow-hidden">
       
-      {/* Background Video (فيديو سينمائي يملأ محيط الشاشة بالكامل مع تظليل خفيف) */}
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[#070B14]/60 z-10" />
         <video 
@@ -21,8 +22,8 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* Top Bar: Logo on Left & WhatsApp / CTA on Right */}
-      <header className="relative z-20 w-full flex items-center justify-between">
+      {/* 1. الهيدر في قمة الشاشة (اللوجو والواتساب) */}
+      <header className="relative z-20 w-full flex items-center justify-between pt-2">
         <div className="text-xl sm:text-2xl font-black tracking-wider text-white font-heading">
           BAIT AL NOKHADA <span className="text-[#D4AF37] text-xs block tracking-[0.3em]">TENTS & FABRIC STRUCTURES</span>
         </div>
@@ -37,8 +38,13 @@ export default function Hero() {
         </a>
       </header>
 
-      {/* Center Hero Content (العنوان الرئيسي الضخم والتفاصيل في قلب الفيديو) */}
-      <div className="relative z-20 max-w-4xl mx-auto text-center space-y-6 my-auto">
+      {/* 2. شريط الاستفسار (منفصل ومرتب تحت الهيدر مباشرة وبخلفية متناسقة) */}
+      <div className="relative z-25 max-w-4xl mx-auto w-full my-4">
+        <InquiryBar />
+      </div>
+
+      {/* 3. محتوى الهيرو المركزي (العنوان) */}
+      <div className="relative z-20 max-w-4xl mx-auto text-center space-y-4 my-auto">
         <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-md shadow-inner">
           Enterprise Turnkey Solutions
         </span>
@@ -55,7 +61,7 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Bottom spacer or Scroll indicator if needed */}
+      {/* Scroll indicator */}
       <div className="relative z-20 w-full flex justify-center pb-2">
         <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
           <div className="w-1.5 h-3 bg-[#D4AF37] rounded-full animate-bounce" />

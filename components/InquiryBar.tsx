@@ -14,11 +14,11 @@ export default function InquiryBar() {
 
   return (
     <motion.div 
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="w-full bg-[#0D1527] border-b border-white/10 py-5.5 px-6 sm:px-12 relative z-30 shadow-xl"
-    >
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="w-full bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl py-3 px-6 shadow-xl"
+>
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 relative z-10">
         
         {/* Text / Hook */}
@@ -33,7 +33,7 @@ export default function InquiryBar() {
 
         {/* Inline Compact Form */}
         {submitted ? (
-          <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-500/15 px-4 py-2 rounded-xl border border-emerald-500/30">
+          <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-500/20 px-4 py-2 rounded-xl border border-emerald-500/40">
             <CheckCircle2 className="w-4 h-4" /> Request sent successfully!
           </div>
         ) : (
@@ -42,13 +42,13 @@ export default function InquiryBar() {
               required
               type="text"
               placeholder="Your Name..."
-              className="w-full sm:w-48 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all"
+              className="w-full sm:w-48 bg-black/20 border border-white/20 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all backdrop-blur-md"
             />
             <input 
               required
               type="tel"
               placeholder="Phone Number (+971...)"
-              className="w-full sm:w-48 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all"
+              className="w-full sm:w-48 bg-black/20 border border-white/20 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-400 focus:border-[#D4AF37] focus:outline-none transition-all backdrop-blur-md"
             />
 
             {/* Heartbeat Pulsing Button */}

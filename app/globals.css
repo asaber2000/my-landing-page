@@ -44,3 +44,15 @@ body, html {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
 }
+
+.force-transparent-bar {
+  background-color: rgba(10, 15, 30, 0.15) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+.inquiry-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
