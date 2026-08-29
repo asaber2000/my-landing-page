@@ -1,13 +1,41 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import InquiryBar from "@/components/InquiryBar";
 import { MessageCircle, PhoneCall } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // ستارة سوداء تختفي بسلاسة بعد ثانيتين لتفتح الموقع كأنه سينما
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="relative w-full h-screen min-h-[700px] flex flex-col justify-between px-6 sm:px-12 lg:px-20 py-4 overflow-hidden">
+    <section className="relative w-full h-screen min-h-[700px] flex flex-col justify-between px-6 sm:px-12 lg:px-20 py-4 overflow-hidden bg-[#070B14]">
       
-      {/* Background Video (يملأ الشاشة بالكامل) */}
+      {/* ستارة البداية السينمائية (تتحرك للأعلى وتختفي بانسيابية) */}
+      {isLoading && (
+        <motion.div 
+          initial={{ y: 0, opacity: 1 }}
+          exit={{ y: "-100%", opacity: 0 }}
+          animate={{ y: isLoading ? 0 : "-100%" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0 z-50 bg-[#070B14] flex flex-col items-center justify-center pointer-events-none"
+        >
+          <div className="text-[#D4AF37] font-heading font-black tracking-widest text-lg animate-pulse mb-2">
+            BAIT AL NOKHADA
+          </div>
+          <div className="w-12 h-0.5 bg-[#D4AF37]/50 rounded-full animate-ping" />
+        </motion.div>
+      )}
+
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[#070B14]/60 z-10" />
         <video 
@@ -33,7 +61,7 @@ export default function Hero() {
         </div>
       </header>
 
-      {/* محتوى الهيرو المركزي والزرارين الشفافين */}
+      {/* محتوى الهيرو المركزي والزرارين */}
       <div className="relative z-20 max-w-4xl mx-auto text-center space-y-4 my-auto">
         <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-md shadow-inner">
           Enterprise Turnkey Solutions
@@ -50,7 +78,7 @@ export default function Hero() {
           Engineered to withstand extreme UAE weather conditions. Delivering certified high-span pavilions and royal hospitality marquees.
         </p>
 
-        {/* الزرارين الشفافين تحت الكلام */}
+        {/* الزرارين الشفافين */}
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <a
             href="https://wa.me/971500000000"
