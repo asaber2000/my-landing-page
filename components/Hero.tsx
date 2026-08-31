@@ -1,6 +1,5 @@
 "use client";
 
-import InquiryBar from "@/components/InquiryBar";
 import SolutionsTicker from "@/components/SolutionsTicker"; // استدعاء الشريط المتحرك
 import { MessageCircle, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
@@ -51,14 +50,13 @@ export default function Hero() {
       </div>
 
       {/* الهيدر العلوي */}
-      <header className="relative z-20 w-full flex flex-col lg:flex-row items-center justify-between gap-4 pt-1">
-        <div className="text-xl sm:text-2xl font-black tracking-wider text-white font-heading">
-          BAIT AL NOKHADA <span className="text-[#D4AF37] text-xs block tracking-[0.3em]">TENTS & FABRIC STRUCTURES</span>
-        </div>
-        
-        <div className="w-full lg:w-auto">
-          <InquiryBar />
-        </div>
+      <header className="relative z-20 w-full grid grid-cols-1 lg:grid-cols-3 items-center gap-4 pt-1">
+          {/* العمود الأول: مكان فاضي عشان يوازن الـ Grid في الشاشات الكبيرة */}
+        <div className="hidden lg:block" />
+        <div className="text-xl sm:text-2xl font-black tracking-wider text-white font-heading text-center">
+    BAIT AL NOKHADA <span className="text-[#D4AF37] text-xs block tracking-[0.3em]">TENTS & FABRIC STRUCTURES</span>
+  </div>
+  
       </header>
 
       {/* محتوى الهيرو المركزي والزرارين */}
