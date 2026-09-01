@@ -1,19 +1,13 @@
 "use client";
 
 const solutions = [
-  { name: "Event Tents", img: "/images/Revalution Tent 2.jpg" },
-  { name: "Exhibition Tents", img: "/images/Premium-Exhibiton-Tent.jpg" },
-  { name: "Conference Tents", img: "/images/Buy & Rent Arch Tents.jpg" },
-  { name: "Sports Tents", img: "/images/Polygon-Tent-for-Sports-in-KSA.jpg" },
-  { name: "Storage Tents", img: "/images/Storage Tent.jpg" },
-  { name: "Accommodation Tents", img: "/images/Accommodation Tents in KSA.jpg" },
-  { name: "Labour Rest Area", img: "/images/Storage Tents For Sale.jpg" },
-  { name: "Ramadan Tents", img: "/images/Ramadan-Tents-in-KSA.jpg" },
-  { name: "Hotels & Resorts", img: "/images/Luxury-Tents-for-Events.jpg" },
-  { name: "Restaurants", img: "/images/Pyramid-Dome-Tents-in-Saudi-Arabia.jpg" },
-  { name: "Premium / Royal Tent", img: "/images/Tent-Rental-in-Riyadh.jpg" },
-  { name: "Aircraft Hangar Tent", img: "/images/VIP-Event-Tents.jpg" },
-  { name: "Wedding Tent", img: "/images/Wedding-Tents-Tent-Manufacturer.jpg" },
+  { name: "Event & Exhibition Tents", img: "/webp-small/accommodation-tent-KSA-Riyadh.webp" },
+  { name: "Sports Tents", img: "/webp-small/best-sports-tent-rental-services-Dubai.webp" },
+  { name: "Storage Tents", img: "/webp-small/Storge-tent-in-UAE.webp" },
+  { name: "Labour Rest Area", img: "/webp-small/accommodation-tent-KSA-Riyadh.webp" },
+  { name: "Ramadan Tents", img: "/webp-small/large-ramadan-tents-UAE.webp" },
+  { name: "Aircraft Hangar Tent", img: "/webp-small/Aircraft-Hanger-Tent-rental-EMIRATES-FLIGHT.webp" },
+  { name: "Wedding Tent", img: "/webp-small/Wedding-tents-Dubai.webp" },
 ];
 
 export default function SolutionsTicker() {
