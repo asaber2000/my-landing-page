@@ -198,8 +198,9 @@
             </AnimatePresence>
           </div>
 
-          {/* الصورة التفاعلية */}
-          <div className="lg:col-span-6 w-full">
+
+{/* الصورة التفاعلية - كاملة بدون زوم وبدون فراغات */}
+<div className="lg:col-span-6 w-full">
   <AnimatePresence mode="wait">
     <motion.div
       key={activeItem.id}
@@ -207,24 +208,16 @@
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 1.05 }}
       transition={{ duration: 0.4 }}
-      className="relative w-full h-[280px] sm:h-[450px] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-black"
+      className="relative w-full rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-black flex items-center justify-center p-4"
     >
       <Image
         src={activeItem.img}
         alt={activeItem.title}
-        fill
+        width={800}
+        height={500}
         sizes="(max-width: 768px) 100vw, 1200px"
-        className="object-cover"
+        className="w-full h-auto rounded-xl object-contain"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-      <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex items-center justify-between text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-        <span className="bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-white/15 text-[#D4AF37]">
-          Bait Al Nokhada Standard
-        </span>
-        <span className="bg-black/60 backdrop-blur-md px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-white/15 text-white">
-          Turnkey Execution
-        </span>
-      </div>
     </motion.div>
   </AnimatePresence>
 </div>
