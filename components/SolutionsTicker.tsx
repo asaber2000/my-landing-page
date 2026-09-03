@@ -3,9 +3,9 @@
 import Image from 'next/image';
 
 const solutions = [
-  { name: "Event & Exhibition Tents", img: "/webp-small/accommodation-tent-KSA-Riyadh.webp" },
+  { name: "Event & Exhibition Tents", img: "/webp-small/Revalution-Tent.webp" },
   { name: "Sports Tents", img: "/webp-small/best-sports-tent-rental-services-Dubai.webp" },
-  { name: "Storage Tents", img: "/webp-small/Storge-tent-in-UAE.webp" },
+  { name: "Warehouse Tents", img: "/webp-small/Storge-tent-in-UAE.webp" },
   { name: "Labour Rest Area", img: "/webp-small/accommodation-tent-KSA-Riyadh.webp" },
   { name: "Ramadan Tents", img: "/webp-small/large-ramadan-tents-UAE.webp" },
   { name: "Aircraft Hangar Tent", img: "/webp-small/Aircraft-Hanger-Tent-rental-EMIRATES-FLIGHT.webp" },

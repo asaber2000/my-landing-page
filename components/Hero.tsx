@@ -70,23 +70,19 @@ export default function Hero() {
 
       {/* محتوى الهيرو المركزي */}
       <div className="relative z-20 max-w-3xl mx-auto text-center space-y-2 sm:space-y-3 my-auto py-2">
-        
-        {/* البادج العلوي المحدث ليكون دولياً ومناسباً للموبايل */}
-        <span className="inline-block px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-md shadow-inner">
-          TENT MANUFACTURING &amp; RENTAL EXPERTS | WORLDWIDE
-        </span>
+      
         
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
-          Your Premier Tent Supplier &amp; Rental Partner <br className="hidden sm:inline" />
+          Your Premier Tent Supplier <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">
-            Worldwide &amp; Across GCC.
+            in UAE &amp; KSA.
           </span>
         </h1>
         
         {/* الوصف: text-xs على الموبايل لتوفير المساحة */}
         <p className="text-xs sm:text-sm lg:text-base text-slate-300 font-light leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
-          Leading manufacturer of certified event structures, luxury wedding marquees, military hangars, and industrial storage tents built to international engineering standards.
+          Specialized in tent manufacturing and rental across UAE & KSA. Delivering certified event tents, luxury wedding tents, and industrial labor tents built for the Gulf climate.
         </p>
         
         {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
@@ -113,7 +109,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="px-3 py-2 rounded-xl bg-black/40 hover:bg-emerald-950/40 border border-white/15 hover:border-emerald-500/50 text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center justify-center gap-1.5 shadow-xl"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-emerald-400" /> WhatsApp
+              <MessageCircle className="w-3.5 h-3.5 text-emerald-400" /> GET A QUOTE ON WhatsApp
             </a>
 
             <a
