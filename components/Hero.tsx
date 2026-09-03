@@ -1,9 +1,10 @@
 "use client";
 
-import SolutionsTicker from "@/components/SolutionsTicker"; // استدعاء الشريط المتحرك
-import { MessageCircle, PhoneCall } from "lucide-react";
+import SolutionsTicker from "@/components/SolutionsTicker";
+import { MessageCircle, PhoneCall, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +17,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[700px] flex flex-col justify-between px-6 sm:px-12 lg:px-20 py-4 overflow-hidden bg-[#070B14]">
+    <section className="relative w-full min-h-[100dvh] lg:h-screen lg:min-h-[700px] flex flex-col justify-between px-4 sm:px-12 lg:px-20 py-3 sm:py-4 overflow-hidden bg-[#070B14]">
       
       {/* ستارة البداية السينمائية */}
       {isLoading && (
@@ -27,77 +28,113 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 z-50 bg-[#070B14] flex flex-col items-center justify-center pointer-events-none"
         >
-          <div className="text-[#D4AF37] font-heading font-black tracking-widest text-lg animate-pulse mb-2">
+          <div className="text-[#D4AF37] font-heading font-black tracking-widest text-base sm:text-lg animate-pulse mb-2">
             BAIT AL NOKHADA
           </div>
           <div className="w-12 h-0.5 bg-[#D4AF37]/50 rounded-full animate-ping" />
         </motion.div>
       )}
 
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-        <div className="absolute inset-0 bg-[#070B14]/60 z-10" />
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover scale-105"
-        >
-          <source src="Test.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      {/* Background Video Container */}
+<div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
+  {/* طبقة التعتيم لضمان وضوح النص */}
+  <div className="absolute inset-0 bg-[#070B14]/65 z-10" />
+  
+  <video 
+    autoPlay 
+    muted 
+    loop 
+    playsInline
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
+    style={{ 
+      filter: "brightness(0.85)"
+    }}
+  >
+    <source src="Test.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
       {/* الهيدر العلوي */}
-      <header className="relative z-20 w-full grid grid-cols-1 lg:grid-cols-3 items-center gap-4 pt-1">
-          {/* العمود الأول: مكان فاضي عشان يوازن الـ Grid في الشاشات الكبيرة */}
-        <div className="hidden lg:block" />
-        <div className="text-xl sm:text-2xl font-black tracking-wider text-white font-heading text-center">
-    BAIT AL NOKHADA <span className="text-[#D4AF37] text-xs block tracking-[0.3em]">TENTS & FABRIC STRUCTURES</span>
-  </div>
-  
+      <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
+        <div className="relative w-36 sm:w-48 lg:w-[420px] h-8 sm:h-10 lg:h-12">
+          <Image
+            src="/logo w.png"
+            alt="Bait Al Nokhada Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </header>
 
-      {/* محتوى الهيرو المركزي والزرارين */}
-      <div className="relative z-20 max-w-4xl mx-auto text-center space-y-4 my-auto">
-        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-md shadow-inner">
-          Enterprise Turnkey Solutions
+      {/* محتوى الهيرو المركزي */}
+      <div className="relative z-20 max-w-3xl mx-auto text-center space-y-2 sm:space-y-3 my-auto py-2">
+        
+        {/* البادج العلوي المحدث ليكون دولياً ومناسباً للموبايل */}
+        <span className="inline-block px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-md shadow-inner">
+          TENT MANUFACTURING &amp; RENTAL EXPERTS | WORLDWIDE
         </span>
         
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-white font-heading drop-shadow-lg">
-          So You Wanna Build? <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A880]">
-            Start Here.
+        {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
+          Your Premier Tent Supplier &amp; Rental Partner <br className="hidden sm:inline" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">
+            Worldwide &amp; Across GCC.
           </span>
         </h1>
         
-        <p className="text-sm sm:text-base text-slate-200 font-light leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-          Engineered to withstand extreme UAE weather conditions. Delivering certified high-span pavilions and royal hospitality marquees.
+        {/* الوصف: text-xs على الموبايل لتوفير المساحة */}
+        <p className="text-xs sm:text-sm lg:text-base text-slate-300 font-light leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
+          Leading manufacturer of certified event structures, luxury wedding marquees, military hangars, and industrial storage tents built to international engineering standards.
         </p>
+        
+        {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-zinc-300 font-medium pt-1">
+          <span className="flex items-center gap-1">
+            <span className="text-[#D4AF37]">✓</span> 30+ Years Experience
+          </span>
+          <span className="text-zinc-600 hidden sm:inline">•</span>
+          <span className="flex items-center gap-1">
+            <span className="text-[#D4AF37]">✓</span> Certified German PVC
+          </span>
+          <span className="text-zinc-600 hidden sm:inline">•</span>
+          <span className="flex items-center gap-1">
+            <span className="text-[#D4AF37]">✓</span> In-House Manufacturing
+          </span>
+        </div>
 
-        {/* الزرارين الشفافين */}
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          <a
-            href="https://wa.me/971500000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-xl bg-black/40 hover:bg-emerald-950/40 border border-white/15 hover:border-emerald-500/50 text-white font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center gap-2 shadow-xl"
-          >
-            <MessageCircle className="w-4 h-4 text-emerald-400" /> WhatsApp Us
-          </a>
+        {/* الأزرار: شبكة سطرين منظمة على الموبايل وصف كامل على الشاشات الأكبر */}
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2 max-w-md mx-auto">
+          <div className="grid grid-cols-2 gap-2 w-full sm:w-auto">
+            <a
+              href="https://wa.me/971543474869"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded-xl bg-black/40 hover:bg-emerald-950/40 border border-white/15 hover:border-emerald-500/50 text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center justify-center gap-1.5 shadow-xl"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-emerald-400" /> WhatsApp
+            </a>
+
+            <a
+              href="tel:+971543474869"
+              className="px-3 py-2 rounded-xl bg-black/40 hover:bg-amber-950/40 border border-white/15 hover:border-[#D4AF37]/50 text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center justify-center gap-1.5 shadow-xl"
+            >
+              <PhoneCall className="w-3.5 h-3.5 text-[#D4AF37]" /> Call Now
+            </a>
+          </div>
 
           <a
-            href="tel:+971500000000"
-            className="px-5 py-2.5 rounded-xl bg-black/40 hover:bg-amber-950/40 border border-white/15 hover:border-[#D4AF37]/50 text-white font-bold text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center gap-2 shadow-xl"
+            href="mailto:marketing01@baitalnokhada.com?subject=Inquiry%20from%20Landing%20Page"
+            className="w-full sm:w-auto px-3.5 py-2 rounded-xl bg-black/40 hover:bg-sky-950/40 border border-white/15 hover:border-sky-400/50 text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center justify-center gap-1.5 shadow-xl"
           >
-            <PhoneCall className="w-4 h-4 text-[#D4AF37]" /> Call Now
+            <Mail className="w-3.5 h-3.5 text-sky-400" /> Email Us
           </a>
         </div>
       </div>
 
-      {/* الشريط المتحرك للحلول (مضاف أسفل الزرارين وفوق الـ Footer/Scroll) */}
-      <div className="relative z-20 w-full -mx-6 sm:-mx-12 lg:-mx-20 px-6 sm:px-12 lg:px-20">
+      {/* الشريط المتحرك للحلول */}
+      <div className="relative z-20 w-full -mx-4 sm:-mx-12 lg:-mx-20 px-4 sm:px-12 lg:px-20 pb-2">
         <SolutionsTicker />
       </div>
 
