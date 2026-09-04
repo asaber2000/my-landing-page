@@ -219,19 +219,19 @@ export default function FeaturedSolutions() {
           </div>
 
           {/* حاوية الصورة والاسم */}
-          <div className="relative w-full h-[300px] sm:h-[480px] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
+          <div className="relative w-full aspect-[10/7] sm:aspect-auto sm:h-[480px] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
             <img
               src={activeProject.img}
               alt={activeProject.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center sm:object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
             
-            <div className="absolute bottom-5 sm:bottom-8 left-5 sm:left-8 right-5 sm:right-8 flex flex-col gap-1.5 sm:gap-2">
-              <span className="text-[11px] sm:text-sm font-bold tracking-[0.2em] text-[#D4AF37] uppercase">
+            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 flex flex-col gap-1 sm:gap-2">
+              <span className="text-[10px] sm:text-sm font-bold tracking-[0.2em] text-[#D4AF37] uppercase">
                 {activeProject.category}
               </span>
-              <h3 className="text-xl sm:text-4xl font-bold font-heading text-white leading-tight">
+              <h3 className="text-base sm:text-4xl font-bold font-heading text-white leading-tight">
                 {activeProject.title}
               </h3>
             </div>
