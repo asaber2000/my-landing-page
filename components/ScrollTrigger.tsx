@@ -159,7 +159,7 @@ export default function InteractiveFinder() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-[#070B14] text-white overflow-hidden border-t border-white/10 flex flex-col justify-center"
+      className="relative w-full h-screen bg-[#070B14] text-white overflow-hidden border-t border-white/10 flex flex-col justify-start pt-8 sm:justify-center sm:pt-0"
     >
       {/* خلفية جمالية متوهجة */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -173,7 +173,7 @@ export default function InteractiveFinder() {
         className="flex items-center h-[76vh] w-max px-6 sm:px-16 gap-8 z-10 will-change-transform"
       >
         {/* كارت المقدمة التعريفي الفخم */}
-        <div className="w-[85vw] sm:w-[460px] shrink-0 flex flex-col justify-center bg-[#0F172A]/60 border border-white/15 backdrop-blur-2xl p-8 rounded-3xl shadow-2xl relative overflow-hidden">
+        <div className="w-[85vw] sm:w-[460px] h-[490px] shrink-0 flex flex-col justify-between bg-[#0F172A]/60 border border-white/15 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none" />
           <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase mb-3 flex items-center gap-2">
             <Compass className="w-4 h-4 animate-spin-slow" />

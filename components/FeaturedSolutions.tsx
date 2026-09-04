@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -18,7 +19,7 @@ const projects = [
       roofFinish: "Double-Layer Insulated PVC Membrane",
       acSystem: "High-Capacity Centralized HVAC"
     },
-    img: "/images/Premium-Exhibiton-Tent.jpg",
+    img: "/webp/DriftX-Tent-Revolutionn.webp",
   },
   {
     id: "fujairah",
@@ -34,7 +35,7 @@ const projects = [
       roofFinish: "Flame-Retardant Architectural Fabric",
       acSystem: "Industrial Climate Control Units"
     },
-    img: "/images/Polygon-Tent-for-Sports-in-KSA.jpg",
+    img: "/webp/Fifa-World-Cup.webp",
   },
   {
     id: "whx",
@@ -50,7 +51,7 @@ const projects = [
       roofFinish: "Insulated Thermal Membrane",
       acSystem: "Commercial Multi-Zone HVAC"
     },
-    img: "/images/Buy & Rent Arch Tents.jpg",
+    img: "/webp/Fujairah-Open-International-Taekwondo-Championships.webp",
   },
   {
     id: "driftx",
@@ -66,7 +67,7 @@ const projects = [
       roofFinish: "Architectural Tensioned Membrane",
       acSystem: "Smart Climate Management"
     },
-    img: "/images/Luxury-Tents-for-Events.jpg",
+    img: "/webp/Gulfood -2026.webp",
   },
   {
     id: "fie",
@@ -82,7 +83,7 @@ const projects = [
       roofFinish: "Translucent PVC Fabric",
       acSystem: "High-Performance Air Handling Units"
     },
-    img: "/images/VIP-Event-Tents.jpg",
+    img: "/webp/Imtiaz.webp",
   },
   {
     id: "netflix",
@@ -98,7 +99,7 @@ const projects = [
       roofFinish: "Double-Layer Acoustic Membrane",
       acSystem: "Precision Climate Control"
     },
-    img: "/images/Ramadan-Tents-in-KSA.jpg",
+    img: "/webp/Netflix-Stranger-Things.webp",
   }
 ];
 
@@ -219,11 +220,14 @@ export default function FeaturedSolutions() {
           </div>
 
           {/* حاوية الصورة والاسم */}
-          <div className="relative w-full aspect-[10/7] sm:aspect-auto sm:h-[480px] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
-            <img
+          <div className="relative w-full aspect-[16/9] sm:aspect-[16/9] lg:aspect-[21/10] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
+            <Image  
               src={activeProject.img}
               alt={activeProject.title}
-              className="w-full h-full object-cover object-center sm:object-center"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 1200px"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
             

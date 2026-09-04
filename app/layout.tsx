@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { fontHeadingEn, fontBodyEn, fontHeadingAr, fontBodyAr } from "./fonts";
+import { Lato } from 'next/font/google';
+
 
 export const metadata: Metadata = {
   title: "Solutions & Services Landing Page",
