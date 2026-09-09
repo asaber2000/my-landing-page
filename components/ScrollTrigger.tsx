@@ -205,39 +205,39 @@ export default function InteractiveFinder() {
             {/* إضاءة ذهبية تفاعلية تتولد مع الحركة */}
             <div className="absolute -inset-px bg-gradient-to-tr from-[#D4AF37]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" />
 
-            {/* صورة المنتج */}
-            <div className="relative w-full h-[52%] rounded-2xl overflow-hidden border border-white/15 bg-black shadow-inner">
-              <Image
-                src={item.img}
-                alt={item.title}
-                fill
-                sizes="(max-width: 768px) 85vw, 520px"
-                className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15 text-[11px] font-bold text-[#D4AF37] shadow-lg">
-                Model 0{index + 1} / 13
+            {/* تجميع الصورة مع النصوص لحذف الفراغ الشاذ */}
+            <div className="flex flex-col gap-5 z-10">
+              {/* صورة المنتج */}
+              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-[#070B14]">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-white/15 text-[11px] font-bold text-[#D4AF37] shadow-lg">
+                  Model {String(index + 1).padStart(2, "0")} / 13
+                </div>
               </div>
-            </div>
 
-            {/* محتوى الكارت */}
-            <div className="flex flex-col gap-2.5 z-10">
-              <div>
+              {/* محتوى الكارت ملتصق تحت الصورة بمسافة طبيعية */}
+              <div className="flex flex-col gap-2">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4AF37] block">
                   {item.subtitle}
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white mt-0.5">
+                <h3 className="text-2xl sm:text-3xl font-bold font-heading text-white">
                   {item.title}
                 </h3>
+                <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed line-clamp-3">
+                  {item.desc}
+                </p>
               </div>
-
-              <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed line-clamp-2">
-                {item.desc}
-              </p>
             </div>
 
-            {/* زر الطلب */}
-            <div className="pt-2 z-10">
+            {/* زر الطلب يستقر في الأسفل */}
+            <div className="pt-4 z-10 mt-auto">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-between w-full px-5 py-3 rounded-xl bg-white/5 hover:bg-[#D4AF37] text-white hover:text-black font-bold text-xs tracking-wider uppercase transition-all duration-300 border border-white/10 group-hover:border-[#D4AF37] shadow-lg"

@@ -6,83 +6,58 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
-    id: "al-ain",
-    title: "Al Ain Equestrian Festival 2026",
-    client: "Al Ain Equestrian Racing & Golf Club",
-    location: "Al Ain, UAE",
+    id: "driftx",
+    title: "DRIFTx Event 2026",
+    client: "Advanced Mobility Innovation Hub",
+    location: "Abu Dhabi, UAE",
     year: "2026",
     coveredArea: "4,500 m²",
-    category: "VIP & Royal Majlis",
-    desc: "Manufactured and installed a premium Revolution Tent for the prestigious Al Ain Equestrian Festival, delivering ideal event spaces for world-class sporting events.",
-    specs: {
-      wallSystem: "Modular Glass Panels & Aluminum",
-      roofFinish: "Double-Layer Insulated PVC Membrane",
-      acSystem: "High-Capacity Centralized HVAC"
-    },
+    category: "Events & Exhibitions tent",
+    desc: "Bait Al Nokhada proudly manufactured and installed a striking tent structure for the prestigious DRIFTx Project event, delivering a high-quality solution tailored to the project’s requirements.",
     img: "/webp/DriftX-Tent-Revolutionn.webp",
   },
   {
-    id: "fujairah",
-    title: "Fujairah Open International Taekwondo Championships",
-    client: "Fujairah Martial Arts Club",
-    location: "Fujairah, UAE",
+    id: "Fifa-World-Cup",
+    title: "FIFA World Cup 2026",
+    client: "FIFA & Local Organizing Committee",
+    location: "Dubai, UAE",
     year: "2026",
     coveredArea: "3,200 m²",
     category: "Sports & High-Span",
     desc: "Installed a high-span polygon structure for international martial arts championships, ensuring absolute weather protection and wide interior clearance.",
-    specs: {
-      wallSystem: "Heavy-Duty Aluminum Frame",
-      roofFinish: "Flame-Retardant Architectural Fabric",
-      acSystem: "Industrial Climate Control Units"
-    },
     img: "/webp/Fifa-World-Cup.webp",
   },
   {
-    id: "whx",
-    title: "World Health Expo (WHX) Dubai 2026",
+    id: "Fujairah-Open-International-Taekwondo-Championships",
+    title: "Fujairah Open International Taekwondo Championships G2 2026",
     client: "Government Healthcare Authorities",
     location: "Dubai, UAE",
     year: "2026",
     coveredArea: "6,000 m²",
-    category: "Exhibition & Trade Show",
-    desc: "Delivered massive exhibition pavilions tailored for international healthcare exhibitions with custom multi-room configurations and full AC integration.",
-    specs: {
-      wallSystem: "Modular Glass & Hard Wall Systems",
-      roofFinish: "Insulated Thermal Membrane",
-      acSystem: "Commercial Multi-Zone HVAC"
-    },
+    category: "Sports & Events Tent",
+    desc: "Bait Al Nokhada installed a premium structure for the Fujairah Open International Taekwondo Championships G2 2026. As leading tent manufacturers in UAE, we provide elite tent rental Dubai services and are top event tent providers for corporate events.",
     img: "/webp/Fujairah-Open-International-Taekwondo-Championships.webp",
   },
   {
-    id: "driftx",
-    title: "DRIFTx Project",
+    id: "gulfood",
+    title: "Gulfood 2026",
     client: "Advanced Mobility Innovation Hub",
-    location: "Abu Dhabi, UAE",
+    location: "Dubai, UAE",
     year: "2026",
     coveredArea: "2,800 m²",
-    category: "Custom Innovative Structure",
-    desc: "Engineered a striking custom tent structure for the groundbreaking DRIFTx event, combining modern aesthetic lines with rugged durability.",
-    specs: {
-      wallSystem: "Panoramic Glass Facades",
-      roofFinish: "Architectural Tensioned Membrane",
-      acSystem: "Smart Climate Management"
-    },
+    category: "Exhibition & Trade Show Tent",
+    desc: "Engineered a striking custom tent structure for the groundbreaking Gulfood 2026 exhibition, combining modern aesthetic lines with rugged durability.",
     img: "/webp/Gulfood -2026.webp",
   },
   {
-    id: "fie",
-    title: "FIE World Cup Fujairah",
+    id: "imtiaz",
+    title: "Imtiaz",
     client: "International Fencing Federation",
-    location: "Fujairah, UAE",
+    location: "Dubai, UAE",
     year: "2025",
     coveredArea: "3,500 m²",
     category: "International Sports Event",
-    desc: "Provided large-scale event tent structures for the FIE World Cup, meeting strict international athletic and hospitality standards.",
-    specs: {
-      wallSystem: "Aluminum Box Beam Frame",
-      roofFinish: "Translucent PVC Fabric",
-      acSystem: "High-Performance Air Handling Units"
-    },
+    desc: "Provided large-scale event tent structures for the Imtiaz event, meeting strict international athletic and hospitality standards.",
     img: "/webp/Imtiaz.webp",
   },
   {
@@ -92,13 +67,8 @@ const projects = [
     location: "Dubai, UAE",
     year: "2026",
     coveredArea: "2,500 m²",
-    category: "Themed Entertainment Marquee",
-    desc: "Installed a specialized dark-tent structure with complete acoustic and light-blocking insulation for an immersive brand activation.",
-    specs: {
-      wallSystem: "Blackout Insulated Panels",
-      roofFinish: "Double-Layer Acoustic Membrane",
-      acSystem: "Precision Climate Control"
-    },
+    category: "Events & Revolution Tent",
+    desc: "Bait Al Nokhada manufactured and installed a premium event tent structure for the prestigious Netflix Stranger Things: The Experience in the UAE. We deliver top-tier, high-quality event tents for companies.",
     img: "/webp/Netflix-Stranger-Things.webp",
   }
 ];
@@ -242,33 +212,14 @@ export default function FeaturedSolutions() {
           </div>
 
           {/* المواصفات الفنية والنظرة العامة */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl backdrop-blur-xl items-center">
-            <div className="lg:col-span-7 flex flex-col justify-center gap-2 sm:gap-3">
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
-                Project Execution Overview
-              </h4>
-              <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">
-                {activeProject.desc}
-              </p>
-            </div>
-            <div className="lg:col-span-5 flex flex-col gap-3 border-t lg:border-t-0 lg:border-l border-white/10 pt-4 lg:pt-0 lg:pl-8 justify-center">
-              <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white mb-1">
-                Technical Specifications
-              </h4>
-              <div className="flex justify-between text-xs sm:text-sm border-b border-white/10 pb-2.5">
-                <span className="text-slate-400">Wall System</span>
-                <span className="font-bold text-white text-right">{activeProject.specs.wallSystem}</span>
-              </div>
-              <div className="flex justify-between text-xs sm:text-sm border-b border-white/10 pb-2.5">
-                <span className="text-slate-400">Roof Finish</span>
-                <span className="font-bold text-white text-right">{activeProject.specs.roofFinish}</span>
-              </div>
-              <div className="flex justify-between text-xs sm:text-sm">
-                <span className="text-slate-400">AC Integration</span>
-                <span className="font-bold text-white text-right">{activeProject.specs.acSystem}</span>
-              </div>
-            </div>
-          </div>
+          <div className="bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl backdrop-blur-xl flex flex-col gap-2 sm:gap-3">
+  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+    Project Execution Overview
+  </h4>
+  <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">
+    {activeProject.desc}
+  </p>
+</div>
 
         </motion.div>
       </AnimatePresence>
