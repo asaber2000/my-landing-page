@@ -50,7 +50,19 @@ export default function Hero() {
       filter: "brightness(0.85)"
     }}
   >
-    <source src="Test.mp4" type="video/mp4" />
+    {/* فيديو الموبايل المخصص للشاشات الأقل من 768px بدون زووم إجباري */}
+        <source
+          src="/Web Vidoe.mp4"
+          type="video/mp4"
+          media="(max-width: 767px)"
+        />
+
+        {/* فيديو الديسكتوب العادي للشاشات من 768px فأكبر */}
+        <source
+          src="/Test.mp4"
+          type="video/mp4"
+          media="(min-width: 768px)"
+        />
     Your browser does not support the video tag.
   </video>
 </div>
