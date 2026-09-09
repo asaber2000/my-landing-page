@@ -5,10 +5,35 @@ import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send request. Please try contacting us directly.");
+      }
+    } catch {
+      alert("Something went wrong. Please try contacting us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const branches = [
@@ -142,10 +167,12 @@ export default function ContactSection() {
                   Full Name
                 </label>
                 <input 
-                  type="text" 
-                  required
-                  placeholder="Your Name or Company Name" 
-                  className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
+  type="text" 
+  required
+  placeholder="Your Name or Company Name" 
+  value={formData.name}
+  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+  className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
                 />
               </div>
 
@@ -158,6 +185,8 @@ export default function ContactSection() {
                     type="tel" 
                     required
                     placeholder="+971 50 000 0000" 
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
                   />
                 </div>
@@ -168,7 +197,9 @@ export default function ContactSection() {
                   <input 
                     type="email" 
                     required
-                    placeholder="name@company.com" 
+                    placeholder="name@company.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
                     className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
                   />
                 </div>
@@ -182,15 +213,18 @@ export default function ContactSection() {
                   required
                   rows={4}
                   placeholder="Mention tent type (e.g. Exhibition, Warehouse), size, location, and rental or purchase needs..." 
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition resize-none"
                 />
               </div>
 
               <button 
                 type="submit"
-                className="mt-2 w-full py-3.5 rounded-xl bg-[#D4AF37] hover:bg-[#c29d30] text-black font-bold text-xs tracking-widest uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+                disabled={loading}
+                className="mt-2 w-full py-3.5 rounded-xl bg-[#D4AF37] hover:bg-[#c29d30] text-black font-bold text-xs tracking-widest uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
               >
-                <span>GET A CUSTOM QUOTE NOW</span>
+                <span>{loading ? "SENDING..." : "GET A CUSTOM QUOTE NOW"}</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
