@@ -3,13 +3,13 @@
 import Image from 'next/image';
 
 const solutions = [
-  { name: "Event & Exhibition Tents", img: "/webp-small/Revalution-Tent.webp" },
-  { name: "Sports Tents", img: "/webp-small/WhatsApp Image 2026-09-09 at 10.14.32 AM.jpeg" },
-  { name: "Warehouse Tents", img: "/webp-small/Storge-tent-in-UAE.webp" },
-  { name: "Labour Rest Area", img: "/webp-small/accommodation-tent-KSA-Riyadh.webp" },
-  { name: "Ramadan Tents", img: "/webp-small/large-ramadan-tents-UAE.webp" },
-  { name: "Aircraft Hangar Tent", img: "/webp-small/Aircraft-Hanger-Tent-rental-EMIRATES-FLIGHT.webp" },
-  { name: "Wedding Tent", img: "/webp-small/Wedding-tents-Dubai.webp" },
+  { name: "Event & Exhibition Tents", img: "/webp-small/exhbition.webp" },
+  { name: "Sports Tents", img: "/webp-small/sports.webp" },
+  { name: "Warehouse Tents", img: "/webp-small/warehouse.webp" },
+  { name: "Labour Rest Area", img: "/webp-small/labour-break.webp" },
+  { name: "Ramadan Tents", img: "/webp-small/ramadan.webp" },
+  { name: "Aircraft Hangar Tent", img: "/webp-small/aircraft-HANGER.webp" },
+  { name: "Wedding Tent", img: "/webp-small/wedding.webp" },
 ];
 
 export default function SolutionsTicker() {

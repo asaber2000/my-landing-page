@@ -13,7 +13,7 @@ const projects = [
     year: "2026",
     coveredArea: "4,500 m²",
     category: "Events & Exhibitions tent",
-    desc: "Bait Al Nokhada proudly manufactured and installed a striking tent structure for the prestigious DRIFTx Project event, delivering a high-quality solution tailored to the project’s requirements.",
+    desc: "As premier tent manufacturers in UAE serving Dubai and beyond, Bait Al Nokhada delivered advanced structures for the DRIFTx Event 2026. Combining our signature Revolution Tent, Arch, and Dome Tent designs, we provided engineered, weather-resistant venues tailored for world-class mobility operations.",
     img: "/webp/DriftX-Tent-Revolutionn.webp",
   },
   {
@@ -24,18 +24,18 @@ const projects = [
     year: "2026",
     coveredArea: "3,200 m²",
     category: "Sports & High-Span",
-    desc: "Installed a high-span polygon structure for international martial arts championships, ensuring absolute weather protection and wide interior clearance.",
+    desc: "Experience the FIFA World Cup 2026 at the largest indoor fan zone in Dubai, crafted with precision tent manufacturing. Combining engineered climate control and bespoke luxury spaces, Bait Al Nokhada delivers the gold standard in tent rental in UAE for world-class sporting events and grand celebrations.",
     img: "/webp/Fifa-World-Cup.webp",
   },
   {
     id: "Fujairah-Open-International-Taekwondo-Championships",
     title: "Fujairah Open International Taekwondo Championships G2 2026",
     client: "Government Healthcare Authorities",
-    location: "Dubai, UAE",
+    location: "Fujairah, UAE",
     year: "2026",
     coveredArea: "6,000 m²",
     category: "Sports & Events Tent",
-    desc: "Bait Al Nokhada installed a premium structure for the Fujairah Open International Taekwondo Championships G2 2026. As leading tent manufacturers in UAE, we provide elite tent rental Dubai services and are top event tent providers for corporate events.",
+    desc: "As a premier tent supplier for the Fujairah Open International Taekwondo Championships G2 2026, Bait Al Nokhada delivered high-performance modular structures engineered for elite sporting excellence. Trust our turnkey event installations across the UAE to provide unparalleled structural safety, prestige, and seamless operational comfort.",
     img: "/webp/Fujairah-Open-International-Taekwondo-Championships.webp",
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     year: "2026",
     coveredArea: "2,800 m²",
     category: "Exhibition & Trade Show Tent",
-    desc: "Engineered a striking custom tent structure for the groundbreaking Gulfood 2026 exhibition, combining modern aesthetic lines with rugged durability.",
+    desc: "Bait Al Nokhada delivers premier tent rental Dubai services for global gatherings like Gulfood Exhibition 2026. Engineered for major world food showcases, our clear-span Polygon Tents combine structural resilience with spacious, luxury event setups.",
     img: "/webp/Gulfood -2026.webp",
   },
   {
@@ -56,8 +56,8 @@ const projects = [
     location: "Dubai, UAE",
     year: "2025",
     coveredArea: "3,500 m²",
-    category: "International Sports Event",
-    desc: "Provided large-scale event tent structures for the Imtiaz event, meeting strict international athletic and hospitality standards.",
+    category: "COMMERCIAL & REAL ESTATE STRUCTURE",
+    desc: "Engineered for the prestigious Imtiaz project, Bait Al Nokhada delivers premium architectural structures featuring sleek full-glass facades. Offering elite tents for sale and turnkey installation across the UAE, our climate-controlled venues provide the ultimate sophisticated setting for luxury corporate showcases and high-profile VIP receptions.",
     img: "/webp/Imtiaz.webp",
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     year: "2026",
     coveredArea: "2,500 m²",
     category: "Events & Revolution Tent",
-    desc: "Bait Al Nokhada manufactured and installed a premium event tent structure for the prestigious Netflix Stranger Things: The Experience in the UAE. We deliver top-tier, high-quality event tents for companies.",
+    desc: "Bait Al Nokhada engineered and installed the custom Revolution Tent for the prestigious Netflix Stranger Things: The Experience Tent project. Combining clear-span design with world-class craftsmanship, we provide turnkey tent rental Dubai solutions to create fully immersive, unforgettable environments for high-profile global brand activations.",
     img: "/webp/Netflix-Stranger-Things.webp",
   }
 ];
@@ -100,7 +100,7 @@ export default function FeaturedSolutions() {
           </h2>
         </div>
         <p className="text-slate-400 text-sm max-w-md font-light leading-relaxed">
-          Explore our landmark executed projects across the UAE, built to uncompromising engineering standards.
+          Here are some of our key projects: Explore select high-profile tent and tensile structure projects successfully delivered across the UAE & GCC.
         </p>
       </div>
 
@@ -165,7 +165,7 @@ export default function FeaturedSolutions() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
               <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1 truncate">
-                Client / Authority
+                CLIENT / EVENT
               </span>
               <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.client}</p>
             </div>
@@ -183,7 +183,7 @@ export default function FeaturedSolutions() {
             </div>
             <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
               <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
-                Completion Year
+                YEAR DELIVERED
               </span>
               <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.year}</p>
             </div>
@@ -214,7 +214,7 @@ export default function FeaturedSolutions() {
           {/* المواصفات الفنية والنظرة العامة */}
           <div className="bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl backdrop-blur-xl flex flex-col gap-2 sm:gap-3">
   <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
-    Project Execution Overview
+    PROJECT HIGHLIGHTS
   </h4>
   <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">
     {activeProject.desc}

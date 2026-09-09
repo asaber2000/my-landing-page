@@ -42,13 +42,13 @@ export default function ContactSection() {
               Get In Touch
             </span>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-heading leading-tight">
-              LET'S TALK ABOUT <br />
+              LET'S DISCUSS YOUR <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A880]">
-                YOUR PROJECT.
+                TENT STRUCTURE.
               </span>
             </h2>
             <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed mt-4 max-w-lg">
-              Have a custom architectural requirement or need turnkey tent solutions in the UAE & KSA? Reach out to our engineering experts today.
+              Need custom-engineered structures, large event setups, or turnkey industrial tents across the UAE & KSA? Speak directly with our technical experts today.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function ContactSection() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="truncate">
-                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Email Support</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">TENDER & SALES INQUIRIES</span>
                   <a href="mailto:Info@baitalnokhada.Com" className="text-xs font-semibold text-white hover:text-[#D4AF37] transition truncate block">
                     Info@baitalnokhada.Com
                   </a>
@@ -121,10 +121,10 @@ export default function ContactSection() {
         {/* 2. كارت الفورم (يأتي مباشرة بعد العنوان في الموبايل، ويميناً في الديسكتوب) */}
         <div className="lg:col-span-6 relative p-6 sm:p-10 rounded-3xl bg-[#0F172A]/80 border border-white/15 backdrop-blur-2xl shadow-2xl w-full">
           <h3 className="text-2xl font-bold font-heading mb-1 text-white">
-            Fill in the form below
+            Request a Free Consultation & Quote
           </h3>
           <p className="text-xs text-slate-400 mb-6">
-            We will get back to you within 24 hours.
+            Fast response from our engineering team within 2 hours.
           </p>
 
           {submitted ? (
@@ -144,7 +144,7 @@ export default function ContactSection() {
                 <input 
                   type="text" 
                   required
-                  placeholder="e.g. Ahmed Saber" 
+                  placeholder="Your Name or Company Name" 
                   className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
                 />
               </div>
@@ -176,12 +176,12 @@ export default function ContactSection() {
 
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
-                  Project Details
+                  Project Scope & Requirements
                 </label>
                 <textarea 
                   required
                   rows={4}
-                  placeholder="Tell us about your tent or structure requirements..." 
+                  placeholder="Mention tent type (e.g. Exhibition, Warehouse), size, location, and rental or purchase needs..." 
                   className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition resize-none"
                 />
               </div>
@@ -190,7 +190,7 @@ export default function ContactSection() {
                 type="submit"
                 className="mt-2 w-full py-3.5 rounded-xl bg-[#D4AF37] hover:bg-[#c29d30] text-black font-bold text-xs tracking-widest uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg"
               >
-                <span>Send My Request</span>
+                <span>GET A CUSTOM QUOTE NOW</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
