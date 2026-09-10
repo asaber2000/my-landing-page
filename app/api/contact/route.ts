@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     // إرسال الإيميل
     const data = await resend.emails.send({
       from: "onboarding@resend.dev", // افتراضي للتجارب، ويمكن تغييره لإيميل الدومين بعد تفعيله
-      to: ["marketing01@baitalnokhada.com"], // ضع هنا إيميلك الشخصي أو إيميل العمل للتجربة
+      to: ["marketing01@baitalnokhada.com", "dm@baitalnokhada.com"], // ضع هنا إيميلك الشخصي أو إيميل العمل للتجربة
       replyTo: email || undefined,
       subject: `New Lead Inquiry: ${name} - Bait Al Nokhada`,
       html: `
