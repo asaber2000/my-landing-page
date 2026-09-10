@@ -92,7 +92,7 @@ export default function Hero() {
         
         {/* زر الواتساب مع أيقونة واتساب الرسمية الدقيقة SVG */}
         <a
-          href="https://wa.me/971543474869"
+          href="https://wa.me/97143444091"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-black/40 hover:bg-emerald-950/40 border border-white/15 hover:border-emerald-500/50 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg hover:scale-105"
@@ -108,7 +108,7 @@ export default function Hero() {
 
         {/* زر الاتصال Call Now */}
         <a
-          href="tel:+971543474869"
+          href="tel:+971558850631"
           className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-black/40 hover:bg-amber-950/40 border border-white/15 hover:border-[#D4AF37]/50 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg hover:scale-105"
         >
           <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37] shrink-0" />
@@ -117,7 +117,7 @@ export default function Hero() {
 
         {/* زر الإيميل Email Us المتناسق في المنتصف */}
         <a
-          href="mailto:marketing01@baitalnokhada.com?subject=Inquiry%20from%20Landing%20Page"
+          href="mailto:info@baitalnokhada.com?subject=Inquiry%20from%20Landing%20Page"
           className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-black/40 hover:bg-sky-950/40 border border-white/15 hover:border-sky-400/50 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg hover:scale-105"
         >
           <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400 shrink-0" />
