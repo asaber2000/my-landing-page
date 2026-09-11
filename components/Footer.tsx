@@ -48,7 +48,7 @@ export default function Footer() {
     },
     { 
       name: "X", 
-      href: "https://x.com/baitalnokhada", 
+      href: "https://x.com/bait_nokhada", 
       hoverBorder: "hover:border-white/50",
       icon: (
         <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">

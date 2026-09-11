@@ -19,24 +19,35 @@ export default function Hero() {
     muted 
     loop 
     playsInline
+    preload="metadata"
+    poster="https://res.cloudinary.com/p8qvgnqt/video/upload/so_0,q_auto,f_auto/v1789109032/Test.jpg"
     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
     style={{ 
       filter: "brightness(0.85)"
     }}
+
   >
+    {/* نسخة WebM لكروم وإيدج (حجم خفيف جداً وتشغيل فوري في جزء من الثانية) */}
+  <source
+    src="https://res.cloudinary.com/p8qvgnqt/video/upload/w_1280,vc_vp9,q_75,ac_none/v1789109032/Test.webm"
+    type="video/webm"
+    media="(min-width: 768px)"
+  />
+
+  {/* فيديو الديسكتوب العادي للشاشات من 768px فأكبر */}
+        <source
+          src="https://res.cloudinary.com/p8qvgnqt/video/upload/w_1280,vc_h264,q_75,ac_none/v1789109032/Test.mp4"
+          type="video/mp4"
+          media="(min-width: 768px)"
+        />
+
     {/* فيديو الموبايل المخصص للشاشات الأقل من 768px بدون زووم إجباري */}
         <source
-          src="/Web Vidoe.mp4"
+          src="https://res.cloudinary.com/p8qvgnqt/video/upload/w_720,vc_h264,q_75,ac_none/v1789110417/Web_Vidoe.mp4"
           type="video/mp4"
           media="(max-width: 767px)"
         />
 
-        {/* فيديو الديسكتوب العادي للشاشات من 768px فأكبر */}
-        <source
-          src="/Test.mp4"
-          type="video/mp4"
-          media="(min-width: 768px)"
-        />
     Your browser does not support the video tag.
   </video>
 </div>
@@ -60,9 +71,9 @@ export default function Hero() {
         
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
-          Your Premier Tent Supplier <br className="hidden sm:inline" />
+          Premium Clear-Span Tent Manufacturing, Rental & Sales  <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">
-            in UAE &amp; KSA.
+            Across UAE & GCC
           </span>
         </h1>
         

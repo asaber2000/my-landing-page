@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fontHeadingEn, fontBodyEn, fontHeadingAr, fontBodyAr } from "./fonts";
+import { fontHeadingEn, fontBodyEn } from "./fonts";
 import { GoogleTagManager } from '@next/third-parties/google';
 
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-WSX2RPG7" />
       <body
-        className={`${fontHeadingEn.variable} ${fontBodyEn.variable} ${fontHeadingAr.variable} ${fontBodyAr.variable} antialiased bg-[#070B14] text-white`}
+        className={`${fontHeadingEn.variable} ${fontBodyEn.variable} antialiased bg-[#070B14] text-white`}
       >
         {children}
       </body>

@@ -165,7 +165,7 @@ export default function FeaturedSolutions() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
               <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1 truncate">
-                CLIENT / EVENT
+                CLIENT NAME
               </span>
               <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.client}</p>
             </div>
