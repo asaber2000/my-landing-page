@@ -16,11 +16,17 @@ export async function POST(request: Request) {
       );
     }
 
-    const cleanPhone = phone.replace(/[^0-9]/g, "");
+    // تجهيز رقم العميل للواتساب بدقة
+    let cleanPhone = phone.replace(/[^0-9]/g, "");
+    if (cleanPhone.startsWith("00")) {
+      cleanPhone = cleanPhone.substring(2);
+    }
+    if (cleanPhone.startsWith("05")) {
+      cleanPhone = "971" + cleanPhone.substring(1);
+    }
 
     // إرسال الإيميل عبر Resend
     const { data, error: resendError } = await resend.emails.send({
-      // إذا كان الدومين موثقاً استخدم إيميل الدومين، وإلا ضع إيميل حساب Resend فقط في خانة to
       from: "onboarding@resend.dev",
       to: ["marketing01@baitalnokhada.com"],
       replyTo: email || undefined,
@@ -86,7 +92,7 @@ export async function POST(request: Request) {
             <tr>
               <td style="padding: 16px; background-color: #070b14; text-align: center; border-top: 1px solid #1e293b;">
                 <p style="margin: 0; font-size: 11px; color: #64748b;">
-                  Automated Lead Notification • Bait Al Nokhada Tents & Fabric Shades
+                  Automated Lead Notification • Bait Al Nokhada Tents Factory
                 </p>
               </td>
             </tr>
@@ -95,7 +101,6 @@ export async function POST(request: Request) {
       `,
     });
 
-    // إذا فشل Resend اطبع الخطأ بدقة في سجلات السيرفر
     if (resendError) {
       console.error("Resend API Rejection Error:", resendError);
     }

@@ -5,6 +5,28 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
+    {
+    id: "gitex",
+    title: "GITEX Global 2025",
+    client: "Dobai World Trade Center",
+    location: "Dubai, UAE",
+    year: "2025",
+    coveredArea: "15500 m²",
+    category: "TECHNOLOGY & EXHIBITION TENTS",
+    desc: "For GITEX Global 2025, Bait Al Nokhada delivered purpose-built exhibition structures for one of the region’s leading technology events. The project was designed to support large-scale visitor environments while maintaining the high-impact presence required for a major international exhibition.",
+    img: "/webp/gitexx.webp",
+  },
+    {
+    id: "gulfood",
+    title: "Gulfood 2026",
+    client: "Dobai World Trade Center",
+    location: "Dubai, UAE",
+    year: "2026",
+    coveredArea: "35000 m²",
+    category: "EVENT & EXHIBITION TENTS",
+    desc: "For Gulfood 2026, Bait Al Nokhada delivered large-scale event structures designed to support a major international food and hospitality exhibition. The project combined functional covered space with a strong presence suited to a high-profile exhibition environment.",
+    img: "/webp/gulffodd.webp",
+  },
   {
     id: "driftx",
     title: "DRIFTx Event 2026",
@@ -16,17 +38,18 @@ const projects = [
     desc: "For DRIFTx 2026 in Abu Dhabi, Bait Al Nokhada delivered a large-scale event environment supporting a technology and mobility-focused experience. The project brought together multiple tent solutions to create a functional and engaging environment for a complex event setting.",
     img: "/webp/drift x.webp",
   },
-  {
-    id: "gulffodd",
-    title: "Gulfood 2026",
-    client: "Dobai World Trade Center",
-    location: "Dubai, UAE",
-    year: "2026",
-    coveredArea: "35000 m²",
-    category: "EVENT & EXHIBITION TENTS",
-    desc: "For Gulfood 2026, Bait Al Nokhada delivered large-scale event structures designed to support a major international food and hospitality exhibition. The project combined functional covered space with a strong presence suited to a high-profile exhibition environment.",
-    img: "/webp/gulffodd.webp",
+    {
+    id: "netflix",
+    title: "Netflix: Stranger Things: The Experience",
+    client: "Miral Destinations",
+    location: "Abu Dhabi, UAE",
+    year: "2025",
+    coveredArea: "5000 m²",
+    category: "IMMERSIVE ENTERTAINMENT STRUCTURE",
+    desc: "For Netflix’s Stranger Things: The Experience, Bait Al Nokhada delivered a distinctive event environment designed around an immersive visitor journey. The project demonstrates how our structures can combine scale, visual impact and flexibility for branded entertainment experiences.",
+    img: "/webp/netflixxx.webp",
   },
+
   {
     id: "airshow",
     title: "Dubai Airshow 2025",  
@@ -38,28 +61,7 @@ const projects = [
     desc: "For Dubai Airshow 2025, Bait Al Nokhada delivered large-scale temporary structures supporting one of the region’s leading aviation events. The project reflects our experience in creating professional event environments for high-profile exhibitions and demanding project requirements.",
     img: "/webp/airshoww.webp",
   },
-  {
-    id: "gitex",
-    title: "GITEX Global 2025",
-    client: "Dobai World Trade Center",
-    location: "Dubai, UAE",
-    year: "2025",
-    coveredArea: "15500 m²",
-    category: "TECHNOLOGY & EXHIBITION TENTS",
-    desc: "For GITEX Global 2025, Bait Al Nokhada delivered purpose-built exhibition structures for one of the region’s leading technology events. The project was designed to support large-scale visitor environments while maintaining the high-impact presence required for a major international exhibition.",
-    img: "/webp/gitexx.webp",
-  },
-  {
-    id: "nettflix",
-    title: "Netflix: Stranger Things: The Experience",
-    client: "Miral Destinations",
-    location: "Abu Dhabi, UAE",
-    year: "2025",
-    coveredArea: "5000 m²",
-    category: "IMMERSIVE ENTERTAINMENT STRUCTURE",
-    desc: "For Netflix’s Stranger Things: The Experience, Bait Al Nokhada delivered a distinctive event environment designed around an immersive visitor journey. The project demonstrates how our structures can combine scale, visual impact and flexibility for branded entertainment experiences.",
-    img: "/webp/netflixxx.webp",
-  },
+
   {
     id: "amaal",
     title: "Amaal × Mansory",
