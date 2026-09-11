@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const { data, error: resendError } = await resend.emails.send({
       // إذا كان الدومين موثقاً استخدم إيميل الدومين، وإلا ضع إيميل حساب Resend فقط في خانة to
       from: "onboarding@resend.dev",
-      to: ["marketing01@baitalnokhada.com", "dm@baitalnokhada.com"],
+      to: ["marketing01@baitalnokhada.com"],
       replyTo: email || undefined,
       subject: `New Lead Inquiry: ${name} - Bait Al Nokhada`,
       html: `
