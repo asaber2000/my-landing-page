@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function WhatsAppWidget() {
   const phoneNumber = "971543474869";
   const defaultMessage = encodeURIComponent(
-    "Hello Bait Al Nokhada, I would like to inquire about your tents and shading solutions."
+    "Hello Bait Al Nokhada, I would like to inquire about your tent solutions."
   );
 
   return (

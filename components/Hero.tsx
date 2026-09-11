@@ -62,14 +62,14 @@ export default function Hero() {
         
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
-          Need a Custom Tent Solution Engineered to Serve <br className="hidden sm:inline" />
+          Need a Custom Tent Solution  <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">
-            Your Needs?
+          Engineered to Serve Your Needs?
           </span>
         </h1>
         
         {/* الوصف: text-xs على الموبايل لتوفير المساحة */}
-        <p className="text-xs sm:text-sm lg:text-base text-slate-300 font-light leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
+        <p className="text-xs sm:text-sm lg:text-base text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
           Yes, exactly as needed — without compromising on quality or time. From commercial expos and luxury setups to heavy-duty warehouses and all structural applications, we engineer custom event tent and outdoor tent options. As trusted tent suppliers with 30+ years of experience, Bait Al Nokhada offers premium tent rental services and direct sales built for extreme weather. Think Precision. Think Quality.
         </p>
         

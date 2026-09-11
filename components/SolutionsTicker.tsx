@@ -3,11 +3,12 @@
 import Image from 'next/image';
 
 const solutions = [
-  { name: "Event & Exhibition Tents", img: "/webp-small/exhibition.webp" },
-  { name: "Sports Tents", img: "/webp-small/sports-tent.webp" },
-  { name: "Warehouse Tents", img: "/webp-small/WAREHOUSD.webp" },
-  { name: "Labour Rest Area", img: "/webp-small/Labour Break time.webp" },
-  { name: "Ramadan Tents", img: "/webp-small/RAMADAN.tent.webp" },
+  { name: "Exhibition Tent", img: "/webp-small/exhibition.webp" },
+  { name: "Event Tent", img: "/webp-small/EVENT.webp" },
+  { name: "Sports Tent", img: "/webp-small/sports-tent.webp" },
+  { name: "Warehouse Tent", img: "/webp-small/WAREHOUSD.webp" },
+  { name: "Labour Tent", img: "/webp-small/Labour Break time.webp" },
+  { name: "Ramadan Tent", img: "/webp-small/RAMADAN.tent.webp" },
   { name: "Aircraft Hangar Tent", img: "/webp-small/AIRCRAFT.webp" },
   { name: "Wedding Tent", img: "/webp-small/Wedding-tents-Dubai.webp" },
 ];

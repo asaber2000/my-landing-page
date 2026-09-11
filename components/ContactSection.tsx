@@ -147,11 +147,9 @@ export default function ContactSection() {
         {/* 2. كارت الفورم (يأتي مباشرة بعد العنوان في الموبايل، ويميناً في الديسكتوب) */}
         <div className="lg:col-span-6 relative p-6 sm:p-10 rounded-3xl bg-[#0F172A]/80 border border-white/15 backdrop-blur-2xl shadow-2xl w-full">
           <h3 className="text-2xl font-bold font-heading mb-1 text-white">
-            Request a Free Consultation & Quote
+           Get Free Quote
           </h3>
-          <p className="text-xs text-slate-400 mb-6">
-            Fast response from our engineering team within 2 hours.
-          </p>
+          
 
           {submitted ? (
             <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
@@ -225,7 +223,7 @@ export default function ContactSection() {
                 disabled={loading}
                 className="mt-2 w-full py-3.5 rounded-xl bg-[#D4AF37] hover:bg-[#c29d30] text-black font-bold text-xs tracking-widest uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
               >
-                <span>{loading ? "SENDING..." : "GET A CUSTOM QUOTE NOW"}</span>
+                <span>{loading ? "SENDING..." : "SUBMIT"}</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>

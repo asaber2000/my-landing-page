@@ -14,7 +14,7 @@ const projects = [
     coveredArea: "10000 m²",
     category: "MOBILITY & TECHNOLOGY EVENT",
     desc: "For DRIFTx 2026 in Abu Dhabi, Bait Al Nokhada delivered a large-scale event environment supporting a technology and mobility-focused experience. The project brought together multiple tent solutions to create a functional and engaging environment for a complex event setting.",
-    img: "/webp/drift xx.webp",
+    img: "/webp/drift x.webp",
   },
   {
     id: "gulffodd",
