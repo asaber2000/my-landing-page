@@ -19,31 +19,23 @@ export default function Hero() {
     muted 
     loop 
     playsInline
-    preload="metadata"
-    poster="https://res.cloudinary.com/p8qvgnqt/video/upload/so_0,q_auto,f_auto/v1789109032/Test.jpg"
+    preload="auto"
     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
     style={{ 
       filter: "brightness(0.85)"
     }}
 
   >
-    {/* نسخة WebM لكروم وإيدج (حجم خفيف جداً وتشغيل فوري في جزء من الثانية) */}
-  <source
-    src="https://res.cloudinary.com/p8qvgnqt/video/upload/w_1280,vc_vp9,q_75,ac_none/v1789109032/Test.webm"
-    type="video/webm"
-    media="(min-width: 768px)"
-  />
-
   {/* فيديو الديسكتوب العادي للشاشات من 768px فأكبر */}
         <source
-          src="https://res.cloudinary.com/p8qvgnqt/video/upload/w_1280,vc_h264,q_75,ac_none/v1789109032/Test.mp4"
+          src="https://d3g07f5oxrfvni.cloudfront.net/Test.mp4"
           type="video/mp4"
           media="(min-width: 768px)"
         />
 
     {/* فيديو الموبايل المخصص للشاشات الأقل من 768px بدون زووم إجباري */}
         <source
-          src="https://res.cloudinary.com/p8qvgnqt/video/upload/w_720,vc_h264,q_75,ac_none/v1789110417/Web_Vidoe.mp4"
+          src="https://d3g07f5oxrfvni.cloudfront.net/Web%20Vidoe.mp4"
           type="video/mp4"
           media="(max-width: 767px)"
         />
@@ -89,12 +81,16 @@ export default function Hero() {
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> Certified German PVC
+            <span className="text-[#D4AF37]">✓</span> RENTAL & PURCHASE
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
             <span className="text-[#D4AF37]">✓</span> In-House Manufacturing
           </span>
+          <span className="text-zinc-600 hidden sm:inline">•</span>
+          <span className="flex items-center gap-1">
+            <span className="text-[#D4AF37]">✓</span> UAE • GCC • WORLDWIDE
+            </span>
         </div>
 
         {/* الأزرار: شبكة سطرين منظمة على الموبايل وصف كامل على الشاشات الأكبر */}
