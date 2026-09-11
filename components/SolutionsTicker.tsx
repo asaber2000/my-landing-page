@@ -7,7 +7,7 @@ const solutions = [
   { name: "Sports Tents", img: "/webp-small/sports-tent.webp" },
   { name: "Warehouse Tents", img: "/webp-small/WAREHOUSD.webp" },
   { name: "Labour Rest Area", img: "/webp-small/Labour Break time.webp" },
-  { name: "Ramadan Tents", img: "/webp-small/RAMADAN.webp" },
+  { name: "Ramadan Tents", img: "/webp-small/RAMADAN.tent.webp" },
   { name: "Aircraft Hangar Tent", img: "/webp-small/AIRCRAFT.webp" },
   { name: "Wedding Tent", img: "/webp-small/Wedding-tents-Dubai.webp" },
 ];

@@ -18,16 +18,16 @@ export async function POST(request: Request) {
 
     const cleanPhone = phone.replace(/[^0-9]/g, "");
 
-    // إرسال الإيميل
-    const data = await resend.emails.send({
-      from: "onboarding@resend.dev", // افتراضي للتجارب، ويمكن تغييره لإيميل الدومين بعد تفعيله
-      to: ["marketing01@baitalnokhada.com", "dm@baitalnokhada.com"], // ضع هنا إيميلك الشخصي أو إيميل العمل للتجربة
+    // إرسال الإيميل عبر Resend
+    const { data, error: resendError } = await resend.emails.send({
+      // إذا كان الدومين موثقاً استخدم إيميل الدومين، وإلا ضع إيميل حساب Resend فقط في خانة to
+      from: "Bait Al Nokhada <notifications@tents.baitalnokhada.com>", 
+      to: ["marketing01@baitalnokhada.com", "dm@baitalnokhada.com"],
       replyTo: email || undefined,
       subject: `New Lead Inquiry: ${name} - Bait Al Nokhada`,
       html: `
         <div style="background-color: #070b14; padding: 30px 15px; font-family: Arial, sans-serif;">
           <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px; background-color: #0f172a; border-radius: 16px; border: 1px solid #1e293b; overflow: hidden;">
-            <!-- ترويسة الرسالة -->
             <tr>
               <td style="padding: 24px; background-color: #111827; border-bottom: 2px solid #D4AF37;">
                 <span style="color: #D4AF37; font-size: 11px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 6px;">
@@ -38,8 +38,6 @@ export async function POST(request: Request) {
                 </h1>
               </td>
             </tr>
-
-            <!-- بيانات العميل -->
             <tr>
               <td style="padding: 24px;">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
@@ -69,7 +67,6 @@ export async function POST(request: Request) {
                   </tr>
                 </table>
 
-                <!-- تفاصيل الطلب -->
                 <div style="background-color: #1e293b; border-radius: 10px; padding: 18px; border-left: 4px solid #D4AF37; margin-bottom: 24px;">
                   <span style="font-size: 11px; font-weight: bold; color: #D4AF37; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 8px;">
                     Project Scope & Requirements:
@@ -79,7 +76,6 @@ export async function POST(request: Request) {
                   </p>
                 </div>
 
-                <!-- زر الإجراء السريع: فتح واتساب العميل فوراً -->
                 <div style="text-align: center; margin-top: 10px;">
                   <a href="https://wa.me/${cleanPhone}" target="_blank" style="background-color: #25D366; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 13px; padding: 12px 28px; border-radius: 8px; display: inline-block;">
                     Chat with Client on WhatsApp
@@ -87,8 +83,6 @@ export async function POST(request: Request) {
                 </div>
               </td>
             </tr>
-
-            <!-- التذييل -->
             <tr>
               <td style="padding: 16px; background-color: #070b14; text-align: center; border-top: 1px solid #1e293b;">
                 <p style="margin: 0; font-size: 11px; color: #64748b;">
@@ -101,7 +95,12 @@ export async function POST(request: Request) {
       `,
     });
 
-    // تسجيل البيانات تلقائياً في Google Sheet
+    // إذا فشل Resend اطبع الخطأ بدقة في سجلات السيرفر
+    if (resendError) {
+      console.error("Resend API Rejection Error:", resendError);
+    }
+
+    // تسجيل البيانات في Google Sheet
     if (process.env.GOOGLE_SHEET_WEBHOOK_URL) {
       fetch(process.env.GOOGLE_SHEET_WEBHOOK_URL, {
         method: "POST",
@@ -110,8 +109,13 @@ export async function POST(request: Request) {
       }).catch((err) => console.error("Sheets log error:", err));
     }
 
+    if (resendError) {
+      return NextResponse.json({ success: false, error: resendError }, { status: 400 });
+    }
+
     return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error) {
+    console.error("Unexpected Route Error:", error);
     return NextResponse.json(
       { error: "Failed to send email" },
       { status: 500 }

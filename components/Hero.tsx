@@ -19,7 +19,6 @@ export default function Hero() {
     muted 
     loop 
     playsInline
-    preload="auto"
     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
     style={{ 
       filter: "brightness(0.85)"
@@ -35,7 +34,7 @@ export default function Hero() {
 
     {/* فيديو الموبايل المخصص للشاشات الأقل من 768px بدون زووم إجباري */}
         <source
-          src="https://d3g07f5oxrfvni.cloudfront.net/Web%20Vidoe.mp4"
+          src="mobile-final.mp4"
           type="video/mp4"
           media="(max-width: 767px)"
         />

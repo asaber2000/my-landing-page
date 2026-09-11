@@ -67,14 +67,14 @@ export default function ContactSection() {
             <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase block mb-3">
               Get In Touch
             </span>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight font-heading leading-tight">
-              LET'S DISCUSS YOUR <br />
+            <h2 className="text-3xl sm:text-5xl lg:text-4xl font-black tracking-tight font-heading leading-tight">
+              TELL US WHAT YOU NEED. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A880]">
-                TENT STRUCTURE.
+                WE’LL TAKE IT FROM THERE.
               </span>
             </h2>
             <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed mt-4 max-w-lg">
-              Need custom-engineered structures, large event setups, or turnkey industrial tents across the UAE & KSA? Speak directly with our technical experts today.
+              Planning an event, exhibition, warehouse or specialized structure? Share your requirements with our team and let’s work out the right tent solution for your project.
             </p>
           </div>
 
