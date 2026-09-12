@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const projects = [
-    {
+  {
     id: "gitex",
     title: "GITEX Global 2025",
     client: "Dobai World Trade Center",
@@ -14,9 +13,9 @@ const projects = [
     coveredArea: "15500 m²",
     category: "TECHNOLOGY & EXHIBITION TENTS",
     desc: "For GITEX Global 2025, Bait Al Nokhada delivered purpose-built exhibition structures for one of the region’s leading technology events. The project was designed to support large-scale visitor environments while maintaining the high-impact presence required for a major international exhibition.",
-    img: "/webp/gitexx.webp",
+    img: "/webp/gitex2025.webp",
   },
-    {
+  {
     id: "gulfood",
     title: "Gulfood 2026",
     client: "Dobai World Trade Center",
@@ -25,7 +24,7 @@ const projects = [
     coveredArea: "35000 m²",
     category: "EVENT & EXHIBITION TENTS",
     desc: "For Gulfood 2026, Bait Al Nokhada delivered large-scale event structures designed to support a major international food and hospitality exhibition. The project combined functional covered space with a strong presence suited to a high-profile exhibition environment.",
-    img: "/webp/gulffodd.webp",
+    img: "/webp/gulfood2026.webp",
   },
   {
     id: "driftx",
@@ -36,9 +35,9 @@ const projects = [
     coveredArea: "10000 m²",
     category: "MOBILITY & TECHNOLOGY EVENT",
     desc: "For DRIFTx 2026 in Abu Dhabi, Bait Al Nokhada delivered a large-scale event environment supporting a technology and mobility-focused experience. The project brought together multiple tent solutions to create a functional and engaging environment for a complex event setting.",
-    img: "/webp/drift x.webp",
+    img: "/webp/driftx.webp",
   },
-    {
+  {
     id: "netflix",
     title: "Netflix: Stranger Things: The Experience",
     client: "Miral Destinations",
@@ -47,9 +46,8 @@ const projects = [
     coveredArea: "5000 m²",
     category: "IMMERSIVE ENTERTAINMENT STRUCTURE",
     desc: "For Netflix’s Stranger Things: The Experience, Bait Al Nokhada delivered a distinctive event environment designed around an immersive visitor journey. The project demonstrates how our structures can combine scale, visual impact and flexibility for branded entertainment experiences.",
-    img: "/webp/netflixxx.webp",
+    img: "/webp/netflix-stranger-things.webp",
   },
-
   {
     id: "airshow",
     title: "Dubai Airshow 2025",  
@@ -59,9 +57,8 @@ const projects = [
     coveredArea: "15000 m²",
     category: "AVIATION & EXHIBITION TENTS",
     desc: "For Dubai Airshow 2025, Bait Al Nokhada delivered large-scale temporary structures supporting one of the region’s leading aviation events. The project reflects our experience in creating professional event environments for high-profile exhibitions and demanding project requirements.",
-    img: "/webp/airshoww.webp",
+    img: "/webp/airshow.webp",
   },
-
   {
     id: "amaal",
     title: "Amaal × Mansory",
@@ -71,7 +68,7 @@ const projects = [
     coveredArea: "2,500 m²",
     category: "SALES GALLERY",
     desc: "For Amaal × Mansory, Bait Al Nokhada delivered a purpose-built environment designed to support a premium sales and customer experience. The structure provided a prominent branded space tailored to the needs of the development and its visitors.",
-    img: "/webp/amaal.webp",
+    img: "/webp/amaal2025.webp",
   }
 ];
 
@@ -87,6 +84,8 @@ export default function FeaturedSolutions() {
   };
 
   const activeProject = projects[currentIndex];
+  // تجهيز رابط الصورة التالية لتنزيلها بالخلفية بدون إثقال المعالج
+  const nextProjectIndex = (currentIndex + 1) % projects.length;
 
   return (
     <section className="relative w-full py-12 sm:py-20 px-4 sm:px-12 lg:px-20 bg-[#070B14] text-white z-20 overflow-hidden">
@@ -106,9 +105,9 @@ export default function FeaturedSolutions() {
         </p>
       </div>
 
-      {/* شريط التحكم الموحد (موبايل + ديسكتوب) */}
+      {/* شريط التحكم الموحد */}
       <div className="max-w-7xl mx-auto mb-8">
-        <div className="flex items-center justify-between bg-[#0F172A]/90 border border-white/10 rounded-2xl p-3 sm:px-6 sm:py-4 backdrop-blur-md">
+        <div className="flex items-center justify-between bg-[#0F172A] sm:bg-[#0F172A]/90 border border-white/10 rounded-2xl p-3 sm:px-6 sm:py-4 sm:backdrop-blur-md">
           {/* المؤشرات التفاعلية النقاط */}
           <div className="flex items-center gap-2 pl-2">
             {projects.map((_, idx) => (
@@ -153,78 +152,74 @@ export default function FeaturedSolutions() {
         </div>
       </div>
 
-      {/* تفاصيل المشروع بالكامل */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeProject.id}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.25 }}
-          className="flex flex-col gap-6 w-full max-w-7xl mx-auto"
-        >
-          {/* كروت المعلومات السريعة */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
-              <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1 truncate">
-                CLIENT NAME
-              </span>
-              <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.client}</p>
-            </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
-              <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
-                Location
-              </span>
-              <p className="text-xs sm:text-base font-bold text-[#D4AF37] truncate">{activeProject.location}</p>
-            </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
-              <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
-                Covered Area
-              </span>
-              <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.coveredArea}</p>
-            </div>
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
-              <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
-                YEAR DELIVERED
-              </span>
-              <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.year}</p>
-            </div>
+      {/* تفاصيل المشروع بالكامل بأنيميشن CSS فائق السرعة */}
+      <div 
+        key={activeProject.id}
+        className="flex flex-col gap-6 w-full max-w-7xl mx-auto transition-opacity duration-300 animate-fadeIn"
+      >
+        {/* كروت المعلومات السريعة بدون blur على الموبايل */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A] sm:bg-[#0F172A]/80 border border-white/10 sm:backdrop-blur-md">
+            <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1 truncate">
+              CLIENT NAME
+            </span>
+            <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.client}</p>
           </div>
-
-          {/* حاوية الصورة والاسم */}
-          <div className="relative w-full aspect-[16/9] sm:aspect-[16/9] lg:aspect-[21/10] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
-            <Image  
-              src={activeProject.img}
-              alt={activeProject.title}
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 1200px"
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-            
-            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 flex flex-col gap-1 sm:gap-2">
-              <span className="text-[10px] sm:text-sm font-bold tracking-[0.2em] text-[#D4AF37] uppercase">
-                {activeProject.category}
-              </span>
-              <h3 className="text-base sm:text-4xl font-bold font-heading text-white leading-tight">
-                {activeProject.title}
-              </h3>
-            </div>
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A] sm:bg-[#0F172A]/80 border border-white/10 sm:backdrop-blur-md">
+            <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
+              Location
+            </span>
+            <p className="text-xs sm:text-base font-bold text-[#D4AF37] truncate">{activeProject.location}</p>
           </div>
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A] sm:bg-[#0F172A]/80 border border-white/10 sm:backdrop-blur-md">
+            <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
+              Covered Area
+            </span>
+            <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.coveredArea}</p>
+          </div>
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A] sm:bg-[#0F172A]/80 border border-white/10 sm:backdrop-blur-md">
+            <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
+              YEAR DELIVERED
+            </span>
+            <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.year}</p>
+          </div>
+        </div>
 
-          {/* المواصفات الفنية والنظرة العامة */}
-          <div className="bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl backdrop-blur-xl flex flex-col gap-2 sm:gap-3">
-  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
-    PROJECT HIGHLIGHTS
-  </h4>
-  <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">
-    {activeProject.desc}
-  </p>
-</div>
+        {/* حاوية الصورة والاسم */}
+        <div className="relative w-full aspect-[16/9] sm:aspect-[16/9] lg:aspect-[21/10] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-xl">
+          <Image  
+            src={activeProject.img}
+            alt={activeProject.title}
+            fill
+            loading="lazy"
+            sizes="(max-width: 640px) 250px, (max-width: 1024px) 700px, 1000px"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+          
+          <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 flex flex-col gap-1 sm:gap-2">
+            <span className="text-[10px] sm:text-sm font-bold tracking-[0.2em] text-[#D4AF37] uppercase">
+              {activeProject.category}
+            </span>
+            <h3 className="text-base sm:text-4xl font-bold font-heading text-white leading-tight">
+              {activeProject.title}
+            </h3>
+          </div>
+        </div>
 
-        </motion.div>
-      </AnimatePresence>
+        {/* المواصفات الفنية والنظرة العامة */}
+        <div className="bg-[#0F172A] sm:bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl sm:backdrop-blur-xl flex flex-col gap-2 sm:gap-3">
+          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+            PROJECT HIGHLIGHTS
+          </h4>
+          <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">
+            {activeProject.desc}
+          </p>
+        </div>
+      </div>
+
+      {/* تحميل خفي ذكي للصورة التالية لضمان السرعة الفورية عند الضغط */}
+      <link rel="prefetch" href={projects[nextProjectIndex].img} as="image" />
 
     </section>
   );

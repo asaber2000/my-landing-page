@@ -10,7 +10,7 @@ const solutions = [
   { name: "Labour Break Tent", img: "/webp-small/LABOUR.INTERIOR.webp" },
   { name: "Ramadan Tent", img: "/webp-small/RAMADAN.tent.webp" },
   { name: "Aircraft Hangar Tent", img: "/webp-small/AIRCRAFT.webp" },
-  { name: "Wedding Tent", img: "/webp-small/Wedding-tents-Dubai.webp" },
+  { name: "Wedding Tent", img: "/webp-small/wedding.webp" },
   { name: "Sales Gallery", img: "/webp-small/ALMARWAN.webp" },
 ];
 

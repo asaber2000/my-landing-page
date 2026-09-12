@@ -34,7 +34,7 @@ export default function Hero() {
 
     {/* فيديو الموبايل المخصص للشاشات الأقل من 768px بدون زووم إجباري */}
         <source
-          src="mobile-final.mp4"
+          src="https://d3g07f5oxrfvni.cloudfront.net/mobile-final.mp4"
           type="video/mp4"
           media="(max-width: 767px)"
         />
@@ -47,18 +47,19 @@ export default function Hero() {
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
         <div className="relative w-36 sm:w-48 lg:w-[420px] h-8 sm:h-10 lg:h-16">
           <Image
-            src="/logo w.png"
+            src="/logooo.svg"
             alt="Bait Al Nokhada Logo"
-            fill
-            className="object-contain"
-            priority
+            className="w-full h-full object-contain"
+            width={320}
+            height={56}
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </header>
 
       {/* محتوى الهيرو المركزي */}
       <div className="relative z-20 max-w-3xl mx-auto text-center space-y-2 sm:space-y-3 my-auto py-2">
-      
         
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
