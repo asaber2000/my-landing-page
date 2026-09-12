@@ -2,7 +2,7 @@
 
 import SolutionsTicker from "@/components/SolutionsTicker";
 import { PhoneCall, Mail } from "lucide-react";
-import Image from "next/image";
+
 
 export default function Hero() {
 
@@ -27,7 +27,7 @@ export default function Hero() {
   >
   {/* فيديو الديسكتوب العادي للشاشات من 768px فأكبر */}
         <source
-          src="https://d3g07f5oxrfvni.cloudfront.net/Test.mp4"
+          src="https://d3g07f5oxrfvni.cloudfront.net/pc-final.mp4"
           type="video/mp4"
           media="(min-width: 768px)"
         />
@@ -46,7 +46,7 @@ export default function Hero() {
       {/* الهيدر العلوي */}
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
         <div className="relative w-36 sm:w-48 lg:w-[420px] h-8 sm:h-10 lg:h-16">
-          <Image
+          <img
             src="/logooo.svg"
             alt="Bait Al Nokhada Logo"
             className="w-full h-full object-contain"
