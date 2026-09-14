@@ -14,7 +14,8 @@ export default function Hero() {
   {/* طبقة التعتيم لضمان وضوح النص */}
   <div className="absolute inset-0 bg-[#070B14]/65 z-10" />
   
-  <video 
+  <video
+    preload="none" 
     autoPlay 
     muted 
     loop 
