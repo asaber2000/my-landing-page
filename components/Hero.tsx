@@ -6,6 +6,15 @@ import { PhoneCall, Mail } from "lucide-react";
 
 
 export default function Hero() {
+  const handleVideoRef = (el: HTMLVideoElement | null) => {
+    if (el && !el.src) {
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      el.src = isDesktop
+        ? "https://d3g07f5oxrfvni.cloudfront.net/pc-video.webm"
+        : "https://d3g07f5oxrfvni.cloudfront.net/Web-phone.webm";
+      el.play().catch(() => {});
+    }
+  };
 
   return (
     <section className="relative w-full min-h-[100dvh] lg:h-screen lg:min-h-[700px] flex flex-col justify-between px-4 sm:px-12 lg:px-20 py-3 sm:py-4 overflow-hidden bg-[#070B14]">
@@ -16,26 +25,17 @@ export default function Hero() {
   <div className="absolute inset-0 bg-[#070B14]/65 z-10" />
   
   <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="metadata"
-    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
-    style={{ filter: "brightness(0.85)" }}
-    ref={(el) => {
-      if (el && !el.src) {
-        // تحديد الرابط المناسب فقط لحظة اتصال العنصر بالصفحة
-        const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-        el.src = isDesktop
-          ? "https://d3g07f5oxrfvni.cloudfront.net/pc-video.webm"
-          : "https://d3g07f5oxrfvni.cloudfront.net/Web-phone.webm";
-        el.play().catch(() => {});
-      }
-    }}
-  />
-
-
+          ref={handleVideoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
+          style={{ filter: "brightness(0.85)" }}
+        />
+      </div>
+      
       {/* الهيدر العلوي */}
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
         <div className="relative w-36 sm:w-48 lg:w-[420px] h-8 sm:h-10 lg:h-16">
