@@ -16,32 +16,25 @@ export default function Hero() {
   <div className="absolute inset-0 bg-[#070B14]/65 z-10" />
   
   <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
-        style={{ filter: "brightness(0.85)" }}
-      >
-        <source src="https://d3g07f5oxrfvni.cloudfront.net/pc-video.webm" type="video/webm" />
-      </video>
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="metadata"
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
+    style={{ filter: "brightness(0.85)" }}
+    ref={(el) => {
+      if (el && !el.src) {
+        // تحديد الرابط المناسب فقط لحظة اتصال العنصر بالصفحة
+        const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+        el.src = isDesktop
+          ? "https://d3g07f5oxrfvni.cloudfront.net/pc-video.webm"
+          : "https://d3g07f5oxrfvni.cloudfront.net/Web-phone.webm";
+        el.play().catch(() => {});
+      }
+    }}
+  />
 
-      {/* فيديو الموبايل فقط (شاشات أصغر من md) سريع وخفيف */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className="block md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
-        style={{ filter: "brightness(0.85)" }}
-      >
-        <source src="https://d3g07f5oxrfvni.cloudfront.net/Web-phone.webm" type="video/webm" />
-
-    Your browser does not support the video tag.
-  </video>
-</div>
 
       {/* الهيدر العلوي */}
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
