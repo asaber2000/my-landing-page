@@ -85,7 +85,7 @@ export default function Footer() {
     aria-label="Home"
   >
     <Image
-      src="/logo w.png"
+      src="/logooo.svg"
       alt="Bait Al Nokhada Logo"
       fill
       className="object-contain"

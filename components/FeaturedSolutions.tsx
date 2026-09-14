@@ -7,7 +7,7 @@ const projects = [
   {
     id: "gitex",
     title: "GITEX Global 2025",
-    client: "Dobai World Trade Center",
+    client: "DUBAI WORLD TRADE CENTER",
     location: "Dubai, UAE",
     year: "2025",
     coveredArea: "15500 m²",
@@ -17,8 +17,8 @@ const projects = [
   },
   {
     id: "gulfood",
-    title: "Gulfood 2026",
-    client: "Dobai World Trade Center",
+    title: "GULFOOD 2026",
+    client: "DUBAI WORLD TRADE CENTER",
     location: "Dubai, UAE",
     year: "2026",
     coveredArea: "35000 m²",
@@ -29,7 +29,7 @@ const projects = [
   {
     id: "driftx",
     title: "DRIFTx Event 2026",
-    client: "World Wide Events",
+    client: "WORLDWIDE EVENTS",
     location: "Abu Dhabi, UAE",
     year: "2025",
     coveredArea: "10000 m²",
@@ -39,8 +39,8 @@ const projects = [
   },
   {
     id: "netflix",
-    title: "Netflix: Stranger Things: The Experience",
-    client: "Miral Destinations",
+    title: "Netflix: Stranger Things The Experience",
+    client: "MIRAL DESTINATION ",
     location: "Abu Dhabi, UAE",
     year: "2025",
     coveredArea: "5000 m²",
@@ -51,7 +51,7 @@ const projects = [
   {
     id: "airshow",
     title: "Dubai Airshow 2025",  
-    client: "Government sector", 
+    client: "GOVERNMENT SECTOR", 
     location: "Dubai, UAE",
     year: "2026",
     coveredArea: "15000 m²",

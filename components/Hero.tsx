@@ -77,7 +77,7 @@ export default function Hero() {
         {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
         <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-zinc-300 font-medium pt-1">
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> 30+ Years Experience
+            <span className="text-[#D4AF37]">✓</span> 30+ YEARS EXPERIENCE
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
@@ -85,7 +85,7 @@ export default function Hero() {
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> In-House Manufacturing
+            <span className="text-[#D4AF37]">✓</span> IN-HOUSE MANUFACTURING
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
