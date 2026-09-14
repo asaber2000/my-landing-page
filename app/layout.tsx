@@ -20,7 +20,7 @@ export default function RootLayout({
       >
         <Script
   id="gtm"
-  strategy="afterInteractive"
+  strategy="lazyOnload"
   dangerouslySetInnerHTML={{
     __html: `
       window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@ export default function RootLayout({
 />
 <Script
   id="gtm-loader"
-  strategy="afterInteractive"
+  strategy="lazyOnload"
   src="https://www.googletagmanager.com/gtm.js?id=GTM-WSX2RPG7"
 />
         {children}
