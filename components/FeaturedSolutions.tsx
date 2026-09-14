@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const projects = [
   {
@@ -86,6 +86,7 @@ export default function FeaturedSolutions() {
   const activeProject = projects[currentIndex];
   // تجهيز رابط الصورة التالية لتنزيلها بالخلفية بدون إثقال المعالج
   const nextProjectIndex = (currentIndex + 1) % projects.length;
+
 
   return (
     <section className="relative w-full py-12 sm:py-20 px-4 sm:px-12 lg:px-20 bg-[#070B14] text-white z-20 overflow-hidden">
@@ -191,8 +192,8 @@ export default function FeaturedSolutions() {
             src={activeProject.img}
             alt={activeProject.title}
             fill
-            loading="lazy"
-            sizes="(max-width: 640px) 250px, (max-width: 1024px) 700px, 1000px"
+            quality={82}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
