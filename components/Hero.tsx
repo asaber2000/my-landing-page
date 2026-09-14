@@ -4,6 +4,7 @@ import SolutionsTicker from "@/components/SolutionsTicker";
 import { PhoneCall, Mail } from "lucide-react";
 
 
+
 export default function Hero() {
 
   return (
@@ -14,12 +15,12 @@ export default function Hero() {
   {/* طبقة التعتيم لضمان وضوح النص */}
   <div className="absolute inset-0 bg-[#070B14]/65 z-10" />
   
-  <video
-    preload="none" 
+  <video 
     autoPlay 
     muted 
     loop 
     playsInline
+    preload="auto"
     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
     style={{ 
       filter: "brightness(0.85)"
@@ -28,15 +29,15 @@ export default function Hero() {
   >
   {/* فيديو الديسكتوب العادي للشاشات من 768px فأكبر */}
         <source
-          src="https://d3g07f5oxrfvni.cloudfront.net/pc-final.mp4"
-          type="video/mp4"
+          src="https://d3g07f5oxrfvni.cloudfront.net/pc-video.webm"
+          type="video/webm"
           media="(min-width: 768px)"
         />
 
     {/* فيديو الموبايل المخصص للشاشات الأقل من 768px بدون زووم إجباري */}
         <source
-          src="https://d3g07f5oxrfvni.cloudfront.net/mobile-final.mp4"
-          type="video/mp4"
+          src="https://d3g07f5oxrfvni.cloudfront.net/Web-phone.webm"
+          type="video/webm"
           media="(max-width: 767px)"
         />
 
