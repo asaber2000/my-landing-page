@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { fontHeadingEn, fontBodyEn } from "./fonts";
-import { GoogleTagManager } from '@next/third-parties/google';
-
-
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Solutions & Services Landing Page",
@@ -17,10 +15,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <GoogleTagManager gtmId="GTM-WSX2RPG7" />
       <body
         className={`${fontHeadingEn.variable} ${fontBodyEn.variable} antialiased bg-[#070B14] text-white`}
       >
+        <Script
+  id="gtm"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    `,
+  }}
+/>
+<Script
+  id="gtm-loader"
+  strategy="afterInteractive"
+  src="https://www.googletagmanager.com/gtm.js?id=GTM-WSX2RPG7"
+/>
         {children}
       </body>
     </html>
