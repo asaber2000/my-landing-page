@@ -24,11 +24,11 @@ export default function WhatsAppWidget() {
             {/* الشعار أو صورة البروفايل مع نقطة أونلاين خضراء */}
             <div className="relative w-10 h-10 rounded-full bg-[#1A2333] border border-white/15 flex items-center justify-center overflow-hidden shrink-0">
               <Image
-                src="/logo w.png"
+                src="/logooo.svg"
                 alt="Bait Al Nokhada"
                 width={30}
                 height={30}
-                className="object-contain"
+                className="w-auto h-auto max-w-full max-h-full object-contain"
               />
               <span className="absolute bottom-0.5 right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-[#0B111E]" />
             </div>
