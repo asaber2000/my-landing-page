@@ -76,7 +76,101 @@ export const metadata: Metadata = {
   },
 };
 
+const schemaJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tents.baitalnokhada.com/#organization",
+      "name": "Bait Al Nokhada Tents Factory",
+      "alternateName": "مصنع بيت النوخذة للخيام",
+      "url": "https://tents.baitalnokhada.com",
+      "logo": "https://tents.baitalnokhada.com/logooo.svg",
+      "foundingDate": "1997",
+      "description": "Leading manufacturer and rental provider of large-scale event tents, industrial warehouse structures, and labor accommodation tents across the UAE, Saudi Arabia, and GCC.",
+      "telephone": "+971558850631",
+      "email": "Info@baitalnokhada.com",
+      "sameAs": ["https://baitalnokhada.com"]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://tents.baitalnokhada.com/#localbusiness",
+      "name": "Bait Al Nokhada Tents - UAE & KSA Operations",
+      "parentOrganization": {
+        "@id": "https://tents.baitalnokhada.com/#organization"
+      },
+      "url": "https://tents.baitalnokhada.com",
+      "telephone": "+971558850631",
+      "email": "Info@baitalnokhada.com",
+      "image": "https://tents.baitalnokhada.com/webp/gitex2025.webp",
+      "priceRange": "$$$$",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Techno Park, Jebel Ali",
+          "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
+          "addressCountry": "AE"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "M41, ICAD-1, Mussafah",
+          "addressLocality": "Abu Dhabi",
+          "addressRegion": "Abu Dhabi",
+          "addressCountry": "AE"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Al Olaya District",
+          "addressLocality": "Riyadh",
+          "addressRegion": "Riyadh",
+          "addressCountry": "SA"
+        }
+      ],
+      "areaServed": [
+        { "@type": "Country", "name": "United Arab Emirates" },
+        { "@type": "Country", "name": "Saudi Arabia" },
+        { "@type": "AdministrativeArea", "name": "GCC" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tents.baitalnokhada.com/#service-event-tents",
+      "name": "Event & Exhibition Tents Manufacturing & Rental",
+      "serviceType": "Commercial Event Tents",
+      "provider": {
+        "@id": "https://tents.baitalnokhada.com/#organization"
+      },
+      "areaServed": ["United Arab Emirates", "Saudi Arabia"],
+      "description": "Engineered clear-span exhibition structures and luxury event tents for major expos, summits, and festivals including GITEX, Gulfood, and Dubai Airshow."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tents.baitalnokhada.com/#service-industrial-tents",
+      "name": "Industrial Warehouse & Storage Tents",
+      "serviceType": "Industrial Temporary Structures",
+      "provider": {
+        "@id": "https://tents.baitalnokhada.com/#organization"
+      },
+      "areaServed": ["United Arab Emirates", "Saudi Arabia"],
+      "description": "Heavy-duty modular storage and warehouse tents designed for long-term logistics storage and industrial installations."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tents.baitalnokhada.com/#service-labor-tents",
+      "name": "Labor Accommodation Tents",
+      "serviceType": "Site Accommodation Structures",
+      "provider": {
+        "@id": "https://tents.baitalnokhada.com/#organization"
+      },
+      "areaServed": ["United Arab Emirates", "Saudi Arabia"],
+      "description": "Rapidly deployable accommodation and mess hall tents for labor camps and construction workforces."
+    }
+  ]
+};
+
 export default function RootLayout({
+
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -96,6 +190,12 @@ export default function RootLayout({
           type="image/webp"
           fetchPriority="high"
           media="(max-width: 767px)"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaJsonLd),
+          }}
         />
       </head>
 
