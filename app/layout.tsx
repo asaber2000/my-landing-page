@@ -17,6 +17,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link
+          rel="preconnect"
+          href="https://d3g07f5oxrfvni.cloudfront.net"
+          crossOrigin="anonymous"
+        />
+        <link
           rel="preload"
           as="image"
           href="/GITEX-EVENT-TENT.webp"
@@ -25,6 +30,7 @@ export default function RootLayout({
           media="(max-width: 767px)"
         />
       </head>
+
       <body
         className={`${fontHeadingEn.variable} ${fontBodyEn.variable} antialiased bg-[#070B14] text-white`}
       >

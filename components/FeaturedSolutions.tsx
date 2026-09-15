@@ -110,18 +110,24 @@ export default function FeaturedSolutions() {
       <div className="max-w-7xl mx-auto mb-8">
         <div className="flex items-center justify-between bg-[#0F172A] sm:bg-[#0F172A]/90 border border-white/10 rounded-2xl p-3 sm:px-6 sm:py-4 sm:backdrop-blur-md">
           {/* المؤشرات التفاعلية النقاط */}
-          <div className="flex items-center gap-2 pl-2">
-            {projects.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  currentIndex === idx ? "w-8 sm:w-10 bg-[#D4AF37]" : "w-2 bg-white/20 hover:bg-white/40"
-                }`}
-                aria-label={`Go to project ${idx + 1}`}
-              />
-            ))}
-          </div>
+          <div className="flex items-center gap-1 pl-2">
+        {projects.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className="py-3 px-1.5 inline-flex items-center justify-center cursor-pointer focus:outline-none"
+            aria-label={`Go to project ${idx + 1}`}
+          >
+            <span
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentIndex === idx
+                  ? "w-8 sm:w-10 bg-[#D4AF37]"
+                  : "w-2 bg-white/20 hover:bg-white/40"
+              }`}
+            />
+          </button>
+        ))}
+      </div>
 
           {/* العداد وأزرار الأسهم */}
           <div className="flex items-center gap-4 sm:gap-6">
@@ -192,8 +198,8 @@ export default function FeaturedSolutions() {
             src={activeProject.img}
             alt={activeProject.title}
             fill
-            quality={82}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+            quality={80}
+            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 70vw, 800px"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
@@ -218,9 +224,6 @@ export default function FeaturedSolutions() {
           </p>
         </div>
       </div>
-
-      {/* تحميل خفي ذكي للصورة التالية لضمان السرعة الفورية عند الضغط */}
-      <link rel="prefetch" href={projects[nextProjectIndex].img} as="image" />
 
     </section>
   );
