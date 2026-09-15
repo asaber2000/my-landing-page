@@ -10,8 +10,8 @@ export default function Hero() {
     if (el && !el.src) {
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
       el.src = isDesktop
-        ? "https://d3g07f5oxrfvni.cloudfront.net/pc-video.webm"
-        : "https://d3g07f5oxrfvni.cloudfront.net/Web-phone.webm";
+        ? "https://d3g07f5oxrfvni.cloudfront.net/pc-new.webm"
+        : "https://d3g07f5oxrfvni.cloudfront.net/Web-Video-new.webm";
       el.play().catch(() => {});
     }
   };
