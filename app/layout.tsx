@@ -15,6 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/GITEX-EVENT-TENT.webp"
+          type="image/webp"
+          fetchPriority="high"
+          media="(max-width: 767px)"
+        />
+      </head>
       <body
         className={`${fontHeadingEn.variable} ${fontBodyEn.variable} antialiased bg-[#070B14] text-white`}
       >

@@ -10,8 +10,8 @@ export default function Hero() {
     if (el && !el.src) {
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
-      if (!isDesktop) {
-        el.poster = "/GITEX-EVENT-TENT.webp";
+      if (isDesktop) {
+        el.poster = "";
       }
       el.src = isDesktop
         ? "https://d3g07f5oxrfvni.cloudfront.net/pc-new.webm"
@@ -30,12 +30,13 @@ export default function Hero() {
   
   <video
           ref={handleVideoRef}
+          poster="/GITEX-EVENT-TENT.webp"
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover transition-opacity duration-500"
           style={{ filter: "brightness(0.85)" }}
         />
       </div>

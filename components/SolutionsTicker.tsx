@@ -28,7 +28,7 @@ export default function SolutionsTicker() {
                 src={item.img} 
                 alt={item.name} 
                 fill
-                sizes="(max-width: 640px) 160px, 256px"
+                sizes="(max-width: 640px) 170px, (max-width: 1024px) 200px, 250px"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none" />
