@@ -4,8 +4,76 @@ import { fontHeadingEn, fontBodyEn } from "./fonts";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Solutions & Services Landing Page",
-  description: "High-Performance Tensile Structures & Solutions",
+  metadataBase: new URL("https://tents.baitalnokhada.com"),
+  title: {
+    default: "Tent Manufacturer & Rental in UAE & Saudi Arabia | Bait Al Nokhada",
+    template: "%s | Bait Al Nokhada",
+  },
+  description:
+    "Leading tent supplier in UAE & KSA. Custom warehouse, exhibition, and event tent rental or purchase solutions. Get your custom quote today.",
+  keywords: [
+    "Tent Manufacturers in UAE",
+    "Tent Manufacturers in Saudi Arabia",
+    "Event Tents Dubai",
+    "Commercial Tents GCC",
+    "Tent Rental UAE",
+    "Tent Rental Saudi Arabia",
+    "Tent Rental Dubai",
+    "Tent Supplier in UAE",
+    "Tent Supplier in Dubai",
+    "Tents Dubai",
+    "Tents for Sale in UAE",
+    "Tents for Sale in Saudi Arabia",
+    "Tents for Sale in Dubai",
+    "Clear Span Tents",
+    "Bait Al Nokhada",
+  ],
+  authors: [{ name: "Bait Al Nokhada Tents Factory" }],
+  creator: "Bait Al Nokhada",
+  publisher: "Bait Al Nokhada",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Tent Manufacturer & Rental in UAE & Saudi Arabia | Bait Al Nokhada",
+    description:
+      "Top tent manufacturer & tent rental of event tents, industrial storage tents, and labor tents across the UAE & Saudi Arabia and GCC. Get a quote today.",
+    url: "https://tents.baitalnokhada.com",
+    siteName: "Bait Al Nokhada",
+    images: [
+      {
+        url: "/webp/gitex2025.webp",
+        width: 1200,
+        height: 630,
+        alt: "Large-Scale Clear Span Exhibition Tent Exterior and Interior for GITEX Dubai 2025",
+      },
+    ],
+    locale: "en_AE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tent Manufacturer & Rental in UAE & Saudi Arabia | Bait Al Nokhada",
+    description:
+      "Top tent manufacturer & tent rental of event tents, industrial storage tents, and labor tents across the UAE & Saudi Arabia and GCC. Get a quote today.",
+    images: ["/webp/gitex2025.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
