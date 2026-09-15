@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: "/webp/gitex2025.webp",
         width: 1200,
         height: 630,
-        alt: "Large-Scale Clear Span Exhibition Tent Exterior and Interior for GITEX Dubai 2025",
+        alt: "Large-Scale Clear Span Exhibition Tent Exterior and Interior for GITEX Dubai",
       },
     ],
     locale: "en_AE",
