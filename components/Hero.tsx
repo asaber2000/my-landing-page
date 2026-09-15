@@ -9,6 +9,10 @@ export default function Hero() {
   const handleVideoRef = (el: HTMLVideoElement | null) => {
     if (el && !el.src) {
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
+      if (!isDesktop) {
+        el.poster = "/GITEX-EVENT-TENT.webp";
+      }
       el.src = isDesktop
         ? "https://d3g07f5oxrfvni.cloudfront.net/pc-new.webm"
         : "https://d3g07f5oxrfvni.cloudfront.net/Web-Video-new.webm";
