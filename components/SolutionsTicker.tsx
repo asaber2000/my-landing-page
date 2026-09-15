@@ -11,7 +11,7 @@ const solutions = [
   { name: "Ramadan Tent", img: "/webp-small/RAMADAN.tent.webp" },
   { name: "Aircraft Hangar Tent", img: "/webp-small/AIRCRAFT.webp" },
   { name: "Wedding Tent", img: "/webp-small/wedding.webp" },
-  { name: "Sales Gallery", img: "/webp-small/ALMARWAN.webp" },
+  { name: "Sales Center Tent", img: "/webp-small/ALMARWAN.webp" },
 ];
 
 export default function SolutionsTicker() {
