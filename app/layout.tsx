@@ -3,6 +3,7 @@ import "./globals.css";
 import { fontHeadingEn, fontBodyEn } from "./fonts";
 import Script from "next/script";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tents.baitalnokhada.com"),
@@ -217,6 +218,7 @@ export default function RootLayout({
         />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
