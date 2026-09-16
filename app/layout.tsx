@@ -90,7 +90,15 @@ const schemaJsonLd = {
       "description": "Leading manufacturer and rental provider of large-scale event tents, industrial warehouse structures, and labor accommodation tents across the UAE, Saudi Arabia, and GCC.",
       "telephone": "+971558850631",
       "email": "Info@baitalnokhada.com",
-      "sameAs": ["https://baitalnokhada.com"]
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Techno Park, Jebel Ali",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "postalCode": "00000",
+        "addressCountry": "AE"
+      },
+      "sameAs": ["https://baitalnokhada.com", "https://www.linkedin.com/company/baitalnokhada/"]
     },
     {
       "@type": "LocalBusiness",
@@ -110,6 +118,7 @@ const schemaJsonLd = {
           "streetAddress": "Techno Park, Jebel Ali",
           "addressLocality": "Dubai",
           "addressRegion": "Dubai",
+          "postalCode": "00000",
           "addressCountry": "AE"
         },
         {
@@ -117,6 +126,7 @@ const schemaJsonLd = {
           "streetAddress": "M41, ICAD-1, Mussafah",
           "addressLocality": "Abu Dhabi",
           "addressRegion": "Abu Dhabi",
+          "postalCode": "00000",
           "addressCountry": "AE"
         },
         {
@@ -124,6 +134,7 @@ const schemaJsonLd = {
           "streetAddress": "Al Olaya District",
           "addressLocality": "Riyadh",
           "addressRegion": "Riyadh",
+          "postalCode": "12211",
           "addressCountry": "SA"
         }
       ],
@@ -133,38 +144,13 @@ const schemaJsonLd = {
         { "@type": "AdministrativeArea", "name": "GCC" }
       ]
     },
-    {
-      "@type": "Service",
-      "@id": "https://tents.baitalnokhada.com/#service-event-tents",
-      "name": "Event & Exhibition Tents Manufacturing & Rental",
-      "serviceType": "Commercial Event Tents",
-      "provider": {
-        "@id": "https://tents.baitalnokhada.com/#organization"
-      },
-      "areaServed": ["United Arab Emirates", "Saudi Arabia"],
-      "description": "Engineered clear-span exhibition structures and luxury event tents for major expos, summits, and festivals including GITEX, Gulfood, and Dubai Airshow."
-    },
-    {
-      "@type": "Service",
-      "@id": "https://tents.baitalnokhada.com/#service-industrial-tents",
-      "name": "Industrial Warehouse & Storage Tents",
-      "serviceType": "Industrial Temporary Structures",
-      "provider": {
-        "@id": "https://tents.baitalnokhada.com/#organization"
-      },
-      "areaServed": ["United Arab Emirates", "Saudi Arabia"],
-      "description": "Heavy-duty modular storage and warehouse tents designed for long-term logistics storage and industrial installations."
-    },
-    {
-      "@type": "Service",
-      "@id": "https://tents.baitalnokhada.com/#service-labor-tents",
-      "name": "Labor Accommodation Tents",
-      "serviceType": "Site Accommodation Structures",
-      "provider": {
-        "@id": "https://tents.baitalnokhada.com/#organization"
-      },
-      "areaServed": ["United Arab Emirates", "Saudi Arabia"],
-      "description": "Rapidly deployable accommodation and mess hall tents for labor camps and construction workforces."
+   {
+      "@type": "WebPage",
+      "@id": "https://tents.baitalnokhada.com/#webpage",
+      "url": "https://tents.baitalnokhada.com",
+      "name": "Custom Tent Solutions & Featured Projects | Bait Al Nokhada",
+      "isPartOf": { "@id": "https://tents.baitalnokhada.com/#organization" },
+      "description": "Explore our portfolio of featured projects including GITEX, Gulfood, and Dubai Airshow. We engineer scalable custom solutions across the UAE & KSA, including event tents, exhibition tents, sports structures, luxury wedding tents, and heavy-duty warehouse tents."
     }
   ]
 };
