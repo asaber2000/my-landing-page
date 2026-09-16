@@ -79,18 +79,18 @@ export default function Footer() {
 
         {/* 2. اللوجو في المنتصف تماماً */}
         <div className="order-1 md:order-2 flex justify-center items-center">
-  <a 
-    href="/" 
-    className="relative block w-32 sm:w-36 h-7 sm:h-8 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 cursor-pointer"
-    aria-label="Home"
-  >
-    <Image
-      src="/logooo.svg"
-      alt="Bait Al Nokhada Logo"
-      fill
-      className="object-contain"
-    />
-  </a>
+  <Link 
+  href="/" 
+  className="relative block w-32 sm:w-36 h-7 sm:h-8 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 cursor-pointer"
+  aria-label="Bait Al Nokhada Tents Home"
+>
+  <Image
+    src="/logooo.svg"
+    alt="Bait Al Nokhada Tents Factory Logo"
+    fill
+    className="object-contain"
+  />
+</Link>
 </div>
 
         {/* 3. أيقونات السوشيال ميديا على اليمين */}

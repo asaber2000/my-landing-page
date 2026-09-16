@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="relative w-36 sm:w-48 lg:w-[420px] h-8 sm:h-10 lg:h-16">
           <img
             src="/logooo.svg"
-            alt="Bait Al Nokhada Logo"
+            alt="Bait Al Nokhada Tents Factory"
             className="w-full h-full object-contain"
             width={320}
             height={56}

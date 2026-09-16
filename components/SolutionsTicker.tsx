@@ -26,7 +26,7 @@ export default function SolutionsTicker() {
             <div className="relative w-40 h-24 sm:w-64 sm:h-36 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl group-hover:border-[#D4AF37] transition-all duration-300">
               <Image 
                 src={item.img} 
-                alt={item.name} 
+                alt={index < solutions.length ? `${item.name} by Bait Al Nokhada Tents` : ""} 
                 fill
                 sizes="(max-width: 640px) 170px, (max-width: 1024px) 200px, 250px"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 

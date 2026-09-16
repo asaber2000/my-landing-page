@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function WhatsAppWidget() {
-  const phoneNumber = "971543474869";
+  const phoneNumber = "97143444091";
   const defaultMessage = encodeURIComponent(
     "Hello Bait Al Nokhada, I would like to inquire about your tent solutions."
   );
@@ -25,7 +25,7 @@ export default function WhatsAppWidget() {
             <div className="relative w-10 h-10 rounded-full bg-[#1A2333] border border-white/15 flex items-center justify-center overflow-hidden shrink-0">
               <Image
                 src="/logooo.svg"
-                alt="Bait Al Nokhada"
+                alt="Bait Al Nokhada Tents Factory Logo"
                 width={30}
                 height={30}
                 className="w-auto h-auto max-w-full max-h-full object-contain"
@@ -34,9 +34,9 @@ export default function WhatsAppWidget() {
             </div>
 
             <div>
-              <h4 className="text-sm font-bold text-white tracking-wide">
+              <span className="text-sm font-bold text-white tracking-wide block">
                 Bait Al Nokhada
-              </h4>
+              </span>
               <p className="text-[11px] text-emerald-400 font-medium">
                 Typically replies within minutes
               </p>

@@ -196,7 +196,7 @@ export default function FeaturedSolutions() {
         <div className="relative w-full aspect-[16/9] sm:aspect-[16/9] lg:aspect-[21/10] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-xl">
           <Image  
             src={activeProject.img}
-            alt={activeProject.title}
+            alt={`${activeProject.title} - ${activeProject.category} by Bait Al Nokhada Tents`}
             fill
             quality={80}
             sizes="(max-width: 640px) 92vw, (max-width: 1024px) 70vw, 800px"
@@ -216,13 +216,22 @@ export default function FeaturedSolutions() {
 
         {/* المواصفات الفنية والنظرة العامة */}
         <div className="bg-[#0F172A] sm:bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl sm:backdrop-blur-xl flex flex-col gap-2 sm:gap-3">
-          <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37] block">
             PROJECT HIGHLIGHTS
-          </h4>
+          </span>
           <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">
             {activeProject.desc}
           </p>
         </div>
+      </div>
+      <div className="sr-only">
+        {projects.map((p) => (
+          <article key={p.id}>
+            <h3>{p.title} - {p.category}</h3>
+            <p>{p.desc}</p>
+            <span>{p.location} - {p.coveredArea}</span>
+          </article>
+        ))}
       </div>
 
     </section>
