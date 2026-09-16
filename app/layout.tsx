@@ -86,6 +86,7 @@ const schemaJsonLd = {
       "alternateName": "مصنع بيت النوخذة للخيام",
       "url": "https://tents.baitalnokhada.com",
       "logo": "https://tents.baitalnokhada.com/logooo.svg",
+      "image": "https://tents.baitalnokhada.com/webp/gitex2025.webp",
       "foundingDate": "1997",
       "description": "Leading manufacturer and rental provider of large-scale event tents, industrial warehouse structures, and labor accommodation tents across the UAE, Saudi Arabia, and GCC.",
       "telephone": "+971558850631",
