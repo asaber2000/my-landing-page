@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { track } from "@vercel/analytics";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,6 +16,11 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    track("Quote Request Submitted", {
+    formTitle: "Get Free Quote",
+    page: "Landing Page",
+  });
+  
     setLoading(true);
 
     try {

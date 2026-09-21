@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Analytics } from '@vercel/analytics/react';
 import { track } from "@vercel/analytics";
 
 export default function WhatsAppWidget() {
