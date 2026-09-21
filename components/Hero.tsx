@@ -126,10 +126,10 @@ export default function Hero() {
 
           {/* زر الإيميل Email Us المتناسق في المنتصف */}
           <a
-            href="mailto:info@baitalnokhada.com?subject=Inquiry%20from%20Landing%20Page"
+            href="mailto:dm@baitalnokhada.com?subject=Inquiry%20from%20Landing%20Page"
             onClick={() => {
               track("Email Inquiry Click", {
-                recipient: "info@baitalnokhada.com",
+                recipient: "dm@baitalnokhada.com",
                 source: "Landing Page Floating/CTA Bar",
               });
             }}
