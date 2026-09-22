@@ -103,8 +103,8 @@ export default function ContactSection() {
               </div>
               <div className="truncate">
                 <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">TENDER & SALES INQUIRIES</span>
-                <a href="mailto:Info@baitalnokhada.Com" className="text-xs font-semibold text-white hover:text-[#D4AF37] transition truncate block">
-                  Info@baitalnokhada.Com
+                <a href="mailto:dm@baitalnokhada.Com" className="text-xs font-semibold text-white hover:text-[#D4AF37] transition truncate block">
+                  dm@baitalnokhada.Com
                 </a>
               </div>
             </div>
