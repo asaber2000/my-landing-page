@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
-    // قراءة الـ body بأمان دون أن ينهار الكود إذا كان الطلب فارغاً
     let body: Record<string, unknown> = {};
     try {
       body = await req.json();
@@ -12,7 +11,7 @@ export async function POST(req: NextRequest) {
 
     const token = process.env.LINKEDIN_CONVERSIONS_TOKEN;
     const conversionId =
-      process.env.LINKEDIN_CONVERSION_ID || "urn:lla:llaPartnerConversion:24707929";
+      process.env.LINKEDIN_CONVERSION_ID || "urn:lla:llaPartnerConversion:30872402";
 
     if (!token) {
       return NextResponse.json(
@@ -20,6 +19,20 @@ export async function POST(req: NextRequest) {
         { status: 500 }
       );
     }
+
+    // جلب معرف كوكيز لينكد إن من المتصفح إن وجد
+    const liFatId = req.cookies.get("li_fat_id")?.value;
+
+    const userIds = Array.isArray(body.userIds) && body.userIds.length > 0
+      ? body.userIds
+      : liFatId
+      ? [{ idType: "LINKEDIN_FIRST_PARTY_ADS_TRACKING_UUID", idValue: liFatId }]
+      : [
+          {
+            idType: "SHA256_EMAIL",
+            idValue: "0000000000000000000000000000000000000000000000000000000000000000",
+          },
+        ];
 
     const payload = {
       conversion: conversionId,
@@ -29,7 +42,7 @@ export async function POST(req: NextRequest) {
         amount: (body.amount as string) || "0.0",
       },
       user: {
-        userIds: Array.isArray(body.userIds) ? body.userIds : [],
+        userIds: userIds,
       },
       eventId: (body.eventId as string) || `lead_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
     };
