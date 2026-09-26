@@ -88,6 +88,12 @@ export default function WhatsAppWidget() {
                 trigger: "Chat Popup Button",
                 action: "Start WhatsApp Chat",
               });
+              fetch("/api/linkedin-conversion", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ type: "WHATSAPP_CLICK" }),
+                keepalive: true,
+              }).catch(() => { });
             }}
 
             className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-95"
