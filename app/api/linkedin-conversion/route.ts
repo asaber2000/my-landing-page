@@ -10,8 +10,10 @@ export async function POST(req: NextRequest) {
     }
 
     const token = process.env.LINKEDIN_CONVERSIONS_TOKEN;
-    const conversionId =
-      process.env.LINKEDIN_CONVERSION_ID || "urn:lla:llaPartnerConversion:30872402";
+    const PAGE_VIEW_ID = process.env.LINKEDIN_CONVERSION_ID || "urn:lla:llaPartnerConversion:30872402";
+    const WHATSAPP_LEAD_ID = "urn:lla:llaPartnerConversion:30872434";
+
+    const conversionId = body.type === "WHATSAPP_CLICK" ? WHATSAPP_LEAD_ID : PAGE_VIEW_ID;
 
     if (!token) {
       return NextResponse.json(
@@ -26,8 +28,8 @@ export async function POST(req: NextRequest) {
     const userIds = Array.isArray(body.userIds) && body.userIds.length > 0
       ? body.userIds
       : liFatId
-      ? [{ idType: "LINKEDIN_FIRST_PARTY_ADS_TRACKING_UUID", idValue: liFatId }]
-      : [
+        ? [{ idType: "LINKEDIN_FIRST_PARTY_ADS_TRACKING_UUID", idValue: liFatId }]
+        : [
           {
             idType: "SHA256_EMAIL",
             idValue: "0000000000000000000000000000000000000000000000000000000000000000",
