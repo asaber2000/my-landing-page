@@ -21,7 +21,7 @@ export default function WhatsAppWidget() {
 
       {/* نافذة المحادثة الداكنة الفاخرة (Dark Card) */}
       <div className="pointer-events-auto mb-3 w-[calc(100vw-2rem)] sm:w-80 rounded-2xl bg-[#0B111E] border border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.8)] overflow-hidden transition-all duration-300 origin-bottom-right scale-0 opacity-0 peer-checked:scale-100 peer-checked:opacity-100">
-        
+
         {/* رأس النافذة (Header) */}
         <div className="bg-gradient-to-r from-[#0F172A] to-[#070B14] p-4 border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -84,13 +84,16 @@ export default function WhatsAppWidget() {
             id="popup-whatsapp-send-btn"
             data-tracking="whatsapp-chat-popup"
             onClick={() => {
-                track("WhatsApp Widget Click", {
-                  trigger: "Chat Popup Button",
-                  action: "Start WhatsApp Chat",
-                });
-                fetch("/api/linkedin-conversion", { method: "POST" });
-              }}
-              
+              track("WhatsApp Widget Click", {
+                trigger: "Chat Popup Button",
+                action: "Start WhatsApp Chat",
+              });
+              fetch("/api/linkedin-conversion", {
+                method: "POST",
+                keepalive: true,
+              }).catch(() => { });
+            }}
+
             className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-95"
           >
             <svg className="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24">
