@@ -94,6 +94,15 @@ export default function WhatsAppWidget() {
                 body: JSON.stringify({ type: "WHATSAPP_CLICK" }),
                 keepalive: true,
               }).catch(() => { });
+              fetch("/api/openai-conversion", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  event_type: "checkout_started",
+                  source_url: window.location.href,
+                }),
+                keepalive: true,
+              }).catch(() => { });
             }}
 
             className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs sm:text-sm rounded-xl shadow-[0_4px_16px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-95"

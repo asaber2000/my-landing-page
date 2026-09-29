@@ -109,6 +109,15 @@ export default function Hero() {
                 body: JSON.stringify({ type: "WHATSAPP_CLICK" }),
                 keepalive: true,
               }).catch(() => { });
+              fetch("/api/openai-conversion", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  event_type: "checkout_started",
+                  source_url: window.location.href,
+                }),
+                keepalive: true,
+              }).catch(() => { });
             }}
             className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-black/40 hover:bg-emerald-950/40 border border-white/15 hover:border-emerald-500/50 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg hover:scale-105"
           >
