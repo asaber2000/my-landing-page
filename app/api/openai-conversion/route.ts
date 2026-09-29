@@ -12,6 +12,8 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json().catch(() => ({}));
+    const eventType = body.event_type || "page_viewed";
+
     const sourceUrl =
       body.source_url ||
       request.headers.get("referer") ||
@@ -22,7 +24,7 @@ export async function POST(request: Request) {
       events: [
         {
           id: crypto.randomUUID(),
-          type: "page_viewed",
+          type: eventType,
           timestamp_ms: Date.now(),
           source_url: sourceUrl,
           action_source: "web",
