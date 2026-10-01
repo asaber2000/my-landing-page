@@ -37,6 +37,7 @@ export default function Hero() {
           loop
           playsInline
           preload="metadata"
+          suppressHydrationWarning
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-full max-w-none object-cover transition-opacity duration-500"
           style={{ filter: "brightness(0.85)" }}
         />
