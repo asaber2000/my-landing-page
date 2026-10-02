@@ -23,17 +23,17 @@ export default function SalesCentersHero() {
 
                 <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-slate-700 bg-white/90 px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-xs">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    MODULAR SALES CENTERS • UAE & KSA
+                    SALES CENTERS Solutions • UAE & KSA
                 </div>
             </header>
 
             {/* 2. المحتوى المركزي - مسافات معتدلة ومتنفسة */}
             <div className="relative z-10 max-w-3xl mx-auto text-center space-y-3 mt-1 shrink-0">
 
-                <h1 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-slate-950 tracking-tight leading-tight font-heading">
-                    Custom Real Estate <br className="hidden sm:inline" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8C6D2B] via-[#B89047] to-[#8C6D2B]">
-                        Sales Center Tents
+                <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-black text-slate-950 tracking-tight leading-tight">
+                    Customized Sales Center Tents <br className="hidden sm:inline" />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B38728] via-[#E1B84C] to-[#9E731B] drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)]">
+                        For UAE Master Developers
                     </span>
                 </h1>
 
@@ -42,29 +42,29 @@ export default function SalesCentersHero() {
                 </p>
 
                 {/* نقاط القوة وسوابق الأعمال - سطر واحد متناسق */}
-          <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-x-3.5 gap-y-1.5 text-xs text-slate-700 pt-1">
-            <span className="flex items-center gap-1.5 font-medium">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6D2B] shrink-0" />
-              Fast-Track Installation
-            </span>
-            <span className="text-slate-300 hidden sm:inline">•</span>
+                <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-x-3.5 gap-y-1.5 text-xs text-slate-700 pt-1">
+                    <span className="flex items-center gap-1.5 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6D2B] shrink-0" />
+                        Fast-Track Installation
+                    </span>
+                    <span className="text-slate-300 hidden sm:inline">•</span>
 
-            <span className="flex items-center gap-1.5 font-medium">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6D2B] shrink-0" />
-              Column-Free Modular Spans
-            </span>
-            <span className="text-slate-300 hidden sm:inline">•</span>
+                    <span className="flex items-center gap-1.5 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6D2B] shrink-0" />
+                        Column-Free Modular Spans
+                    </span>
+                    <span className="text-slate-300 hidden sm:inline">•</span>
 
-            <span className="flex items-center gap-1.5 font-medium">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6D2B] shrink-0" />
-              Turnkey HVAC & Fit-Out
-            </span>
-            <span className="text-slate-300 hidden sm:inline">•</span>
+                    <span className="flex items-center gap-1.5 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6D2B] shrink-0" />
+                        Turnkey HVAC & Fit-Out
+                    </span>
+                    <span className="text-slate-300 hidden sm:inline">•</span>
 
-            <span className="font-bold text-[#8C6D2B]">
-              Engineered for UAE Developers
-            </span>
-          </div>
+                    <span className="font-bold text-[#8C6D2B]">
+                        Engineered for UAE Developers
+                    </span>
+                </div>
 
                 {/* أزرار التحويل المباشرة */}
                 <div className="pt-1 flex flex-wrap items-center justify-center gap-2.5">

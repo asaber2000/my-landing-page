@@ -151,9 +151,9 @@ export default function SalesCentersShowcase() {
             <span>FEATURED REAL ESTATE PROJECTS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight font-heading leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
             Custom Sales Center Tents <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8C6D2B] via-[#B89047] to-[#8C6D2B]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B38728] via-[#E1B84C] to-[#9E731B] drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)]">
               For UAE Master Developers
             </span>
           </h2>
@@ -173,8 +173,8 @@ export default function SalesCentersShowcase() {
                   key={proj.id}
                   onClick={() => changeProject(idx)}
                   className={`flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-2.5 px-2 sm:px-5 rounded-full font-bold transition-all duration-300 cursor-pointer text-center ${isActive
-                      ? "bg-slate-950 text-white shadow-md"
-                      : "text-slate-600 hover:text-slate-950 hover:bg-white/50"
+                    ? "bg-slate-950 text-white shadow-md"
+                    : "text-slate-600 hover:text-slate-950 hover:bg-white/50"
                     }`}
                 >
                   <Building2
@@ -335,8 +335,8 @@ export default function SalesCentersShowcase() {
               key={`${currentProject.id}-thumb-${thumbIdx}`}
               onClick={() => setSelectedImageIndex(thumbIdx)}
               className={`relative aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden border-2 transition-all duration-300 cursor-pointer ${selectedImageIndex === thumbIdx
-                  ? "border-[#8C6D2B] ring-2 sm:ring-4 ring-[#8C6D2B]/20 scale-105 shadow-md"
-                  : "border-slate-200/80 opacity-50 hover:opacity-100 hover:scale-100"
+                ? "border-[#8C6D2B] ring-2 sm:ring-4 ring-[#8C6D2B]/20 scale-105 shadow-md"
+                : "border-slate-200/80 opacity-50 hover:opacity-100 hover:scale-100"
                 }`}
             >
               <Image
