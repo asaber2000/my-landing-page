@@ -261,19 +261,7 @@ export default function SalesCentersShowcase() {
                   priority={isActive}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/30 pointer-events-none" />
-
-                <div className="absolute top-3 left-3 right-3 sm:top-6 sm:left-6 sm:right-6 z-10 flex items-center justify-between">
-                  <span className="px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider bg-white/90 text-slate-950 shadow-md">
-                    {proj.developer}
-                  </span>
-
-                  {isActive && (
-                    <span className="px-3.5 py-1 rounded-full text-[11px] font-bold bg-black/60 backdrop-blur-md text-white border border-white/20">
-                      Photo {selectedImageIndex + 1} / {proj.images.length}
-                    </span>
-                  )}
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
                 {/* أسهم داخلية تظهر فقط على شاشات الديسكتوب عند مرور الماوس لمنع التداخل في الموبايل */}
                 {isActive && (
@@ -296,22 +284,19 @@ export default function SalesCentersShowcase() {
                   </div>
                 )}
 
-                <div className="absolute bottom-2.5 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 z-10 flex items-end justify-between text-white">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-xs text-amber-300 font-bold mb-1">
-                      <MapPin className="w-3.5 h-3.5" />
-                      <span>{proj.location}</span>
-                    </div>
-                    <h3 className="text-sm sm:text-2xl font-black font-heading leading-tight drop-shadow-md line-clamp-1 sm:line-clamp-none">
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 z-10 flex items-center justify-between text-white pointer-events-none">
+                  <div className="flex items-center gap-3">
+                    <div className="w-1.5 h-6 bg-[#C5A880] rounded-full hidden sm:block" />
+                    <h3 className="text-sm sm:text-xl md:text-2xl font-black font-heading leading-tight drop-shadow-lg tracking-tight">
                       {proj.projectTitle}
                     </h3>
                   </div>
 
-                  <div className="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-bold text-white">
-                    <span>{proj.coveredArea}</span> 
-                    <span className="opacity-60">•</span>
-                    <span>{proj.year}</span>
-                  </div>
+                  {isActive && (
+                    <span className="px-3 py-1 rounded-full text-[10px] sm:text-xs font-mono font-bold bg-black/50 backdrop-blur-md text-white/90 border border-white/15 shadow-sm">
+                      0{selectedImageIndex + 1} / 0{proj.images.length}
+                    </span>
+                  )}
                 </div>
 
                 {isActive && (

@@ -43,17 +43,17 @@ export default function SalesCentersLeadForm() {
   return (
     <section className="relative w-full py-20 px-4 sm:px-8 lg:px-16 bg-white text-slate-900 border-t border-slate-100">
       <div className="max-w-4xl mx-auto space-y-16">
-        
+
         {/* 1. رأس القسم */}
         <div className="text-center space-y-3">
           <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#8C6D2B]">
-            Bespoke Architecture • Fast Deployment
+            FAST RESPONSE • UAE SALES CENTERS & TENTS
           </p>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight font-heading">
-            Initiate Your Project Layout
+            Request a Quote & Site Layout
           </h2>
           <p className="text-sm text-slate-500 font-normal max-w-lg mx-auto leading-relaxed">
-            Receive preliminary structural feasibility, 3D modular concepts, and turnkey timelines for your sales gallery within 24 hours.
+            Get instant pricing, engineering specs, and layout options tailored for your property launch.
           </p>
         </div>
 
@@ -81,9 +81,9 @@ export default function SalesCentersLeadForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-7">
-                
+
                 {/* 1. الاسم */}
                 <div className="space-y-1.5 border-b border-slate-200 focus-within:border-[#8C6D2B] transition-colors pb-1">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
@@ -150,11 +150,10 @@ export default function SalesCentersLeadForm() {
               <div className="pt-4 flex justify-center items-center border-t border-slate-100">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full sm:w-auto px-10 py-3.5 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-md hover:-translate-y-0.5 flex items-center justify-center gap-3 disabled:opacity-50 cursor-pointer"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:-translate-y-0.5 cursor-pointer flex items-center justify-center gap-2 mx-auto"
                 >
-                  <span>{isSubmitting ? "Submitting..." : "Request Proposal"}</span>
-                  <ArrowRight className="w-4 h-4 text-[#C5A880]" />
+                  <span>Get Project Quote & Layout</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#C5A880]" />
                 </button>
               </div>
 
@@ -164,10 +163,10 @@ export default function SalesCentersLeadForm() {
 
         {/* 3. كروت التواصل المباشر والفروع الإقليمية (بالثيم الأبيض الفاخر) */}
         <div className="space-y-6 pt-4">
-          
+
           {/* قنوات الاتصال المباشرة */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
+
             {/* Phone Card */}
             <a
               href="tel:+971558850631"
@@ -209,7 +208,7 @@ export default function SalesCentersLeadForm() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-              
+
               {/* دبي */}
               <div className="p-4 rounded-2xl bg-[#FCFCFB] border border-slate-200/80 relative group">
                 <div className="flex items-center justify-between mb-1">
