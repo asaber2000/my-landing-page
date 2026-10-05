@@ -13,7 +13,7 @@ const projects = [
     coveredArea: "15500 m²",
     category: "TECHNOLOGY & EXHIBITION TENTS",
     desc: "For GITEX Global 2025, Bait Al Nokhada delivered purpose-built exhibition structures for one of the region’s leading technology events. The project was designed to support large-scale visitor environments while maintaining the high-impact presence required for a major international exhibition.",
-    img: "/webp/gitex2025.webp",
+    img: "https://d3g07f5oxrfvni.cloudfront.net/media-images/Featured+Projects/gitex2025.webp",
   },
   {
     id: "gulfood",
@@ -24,7 +24,7 @@ const projects = [
     coveredArea: "35000 m²",
     category: "EVENT & EXHIBITION TENTS",
     desc: "For Gulfood 2026, Bait Al Nokhada delivered large-scale event structures designed to support a major international food and hospitality exhibition. The project combined functional covered space with a strong presence suited to a high-profile exhibition environment.",
-    img: "/webp/gulfood2026.webp",
+    img: "https://d3g07f5oxrfvni.cloudfront.net/media-images/Featured+Projects/gulfood2026.webp",
   },
   {
     id: "driftx",
@@ -35,7 +35,7 @@ const projects = [
     coveredArea: "10000 m²",
     category: "MOBILITY & TECHNOLOGY EVENT",
     desc: "For DRIFTx 2026 in Abu Dhabi, Bait Al Nokhada delivered a large-scale event environment supporting a technology and mobility-focused experience. The project brought together multiple tent solutions to create a functional and engaging environment for a complex event setting.",
-    img: "/webp/driftx.webp",
+    img: "https://d3g07f5oxrfvni.cloudfront.net/media-images/Featured+Projects/driftx.webp",
   },
   {
     id: "netflix",
@@ -46,7 +46,7 @@ const projects = [
     coveredArea: "5000 m²",
     category: "IMMERSIVE ENTERTAINMENT STRUCTURE",
     desc: "For Netflix’s Stranger Things: The Experience, Bait Al Nokhada delivered a distinctive event environment designed around an immersive visitor journey. The project demonstrates how our structures can combine scale, visual impact and flexibility for branded entertainment experiences.",
-    img: "/webp/netflix-stranger-things.webp",
+    img: "https://d3g07f5oxrfvni.cloudfront.net/media-images/Featured+Projects/netflix-stranger-things.webp",
   },
   {
     id: "airshow",
@@ -57,7 +57,7 @@ const projects = [
     coveredArea: "15000 m²",
     category: "AVIATION & EXHIBITION TENTS",
     desc: "For Dubai Airshow 2025, Bait Al Nokhada delivered large-scale temporary structures supporting one of the region’s leading aviation events. The project reflects our experience in creating professional event environments for high-profile exhibitions and demanding project requirements.",
-    img: "/webp/airshow.webp",
+    img: "https://d3g07f5oxrfvni.cloudfront.net/media-images/Featured+Projects/airshow.webp",
   },
   {
     id: "amaal",
@@ -68,7 +68,7 @@ const projects = [
     coveredArea: "2,500 m²",
     category: "SALES GALLERY",
     desc: "For Amaal × Mansory, Bait Al Nokhada delivered a purpose-built environment designed to support a premium sales and customer experience. The structure provided a prominent branded space tailored to the needs of the development and its visitors.",
-    img: "/webp/amaal2025.webp",
+    img: "https://d3g07f5oxrfvni.cloudfront.net/media-images/Featured+Projects/amaal2025.webp",
   }
 ];
 
@@ -198,8 +198,8 @@ export default function FeaturedSolutions() {
             src={activeProject.img}
             alt={`${activeProject.title} - ${activeProject.category} by Bait Al Nokhada Tents`}
             fill
-            quality={80}
-            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 70vw, 800px"
+            quality={90}
+            sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1920px"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
@@ -233,6 +233,7 @@ export default function FeaturedSolutions() {
           </article>
         ))}
       </div>
+      
 
     </section>
   );
