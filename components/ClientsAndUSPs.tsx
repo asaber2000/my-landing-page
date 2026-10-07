@@ -3,18 +3,20 @@
 import React from "react";
 import Image from "next/image";
 
-// نفس بيانات ومسارات الهوم بيدج التي تعمل عندك في الصورة بنجاح
+// اللوجوهات المعتمدة بمصادرها الحقيقية والأصلية
 const clients = [
   { name: "Netflix", logo: "/images/netflix.svg", filterType: "normal" },
-  { name: "Dubai Media", logo: "/images/yas-island-logo.avif", filterType: "normal" },
+  { name: "Yas Island", logo: "/images/yas-island-logo.avif", filterType: "normal" },
   { name: "ADNOC", logo: "/images/adnoc-logo-updated.svg", filterType: "normal" },
-  { name: "Emaar", logo: "/images/gv_uae_logo_new.svg", filterType: "normal" },
-  { name: "Etihad Rail", logo: "/images/emaar-logo.svg", filterType: "normal" },
+  { name: "Global Village", logo: "/images/gv_uae_logo_new.svg", filterType: "normal" },
+  { name: "Emaar", logo: "/images/emaar-logo.svg", filterType: "normal" },
   { name: "Expo City Dubai", logo: "/images/expo.svg", filterType: "invert" },
 ];
 
+// المزايا التنافسية (USPs) بصيغة Bento Pillars
 const usps = [
   {
+    num: "01",
     title: "In-House Manufacturing",
     desc: "Precision Engineering & Certified Quality Control",
     icon: (
@@ -24,6 +26,7 @@ const usps = [
     ),
   },
   {
+    num: "02",
     title: "End-to-End Execution",
     desc: "Fast Delivery, Rigging & Climate-Control Setup",
     icon: (
@@ -33,6 +36,7 @@ const usps = [
     ),
   },
   {
+    num: "03",
     title: "Proven Reliability",
     desc: "30+ Years Track Record Across UAE & GCC",
     icon: (
@@ -45,66 +49,100 @@ const usps = [
 
 export default function ClientsAndUSPs() {
   return (
-    <section className="relative py-12 bg-[#070B14] border-t border-b border-white/5 overflow-hidden">
+    <section className="relative py-10 sm:py-16 bg-[#070B14] border-t border-b border-white/5 overflow-hidden">
       
-      {/* توهج ذهبي خافت جداً في الخلفية */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[200px] bg-[#df9d17]/5 blur-[160px] rounded-full pointer-events-none" />
+      {/* توهج خلفي محيطي خافت وفخم */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[900px] h-[250px] bg-[#df9d17]/5 blur-[160px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* شارة العنوان العلوية المتناسقة مع هوية موقعك */}
-        <div className="w-full text-center">
-          <span className="text-xs uppercase tracking-[0.35em] font-bold text-[#e6b224] bg-[#df9d17]/10 border border-[#df9d17]/25 px-5 py-2 rounded-full shadow-sm">
-            Trusted by Global Enterprises & Government Entities
-          </span>
-        </div>
+        {/* اللوحة الزجاجية الموحدة (The Glass Bento Box) */}
+        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/10 p-5 sm:p-8 lg:p-10 shadow-2xl backdrop-blur-xl overflow-hidden">
+          
+          {/* خط لمعان علوي دقيق جداً */}
+          <div className="absolute top-0 inset-x-8 sm:inset-x-20 h-[1px] bg-gradient-to-r from-transparent via-[#df9d17]/50 to-transparent" />
 
-        {/* شبكة الكروت الداكنة الموحدة طبق الأصل من شاشتك وبدون سكرول */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-          {clients.map((client, idx) => (
-            <div
-              key={`${client.name}-${idx}`}
-              className="flex items-center justify-center h-[115px] p-2.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#df9d17]/50 hover:bg-white/[0.06] transition-all duration-300 group shadow-lg"
-            >
-              <div className="relative w-[90%] h-[78px] flex items-center justify-center">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  sizes="180px"
-                  className={`object-contain transition-all duration-300 group-hover:scale-105 ${
-                    client.filterType === "invert"
-                      ? "invert brightness-200 opacity-90 group-hover:opacity-100"
-                      : client.filterType === "mubadala"
-                      ? "opacity-85 brightness-90 contrast-125 mix-blend-screen group-hover:opacity-100"
-                      : "opacity-95 group-hover:opacity-100"
-                  }`}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* قسم المزايا التنافسية (USPs) أسفلها مباشرة */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-white/5">
-          {usps.map((usp, idx) => (
-            <div
-              key={idx}
-              className="flex items-center gap-4 p-4 rounded-xl bg-[#0c1222] border border-white/5 hover:border-[#df9d17]/30 transition-all duration-300 shadow-md"
-            >
-              <div className="p-3 rounded-lg bg-[#df9d17]/10 flex-shrink-0 text-[#df9d17]">
-                {usp.icon}
-              </div>
-              <div>
-                <h4 className="text-white text-sm font-bold tracking-tight">
-                  {usp.title}
-                </h4>
-                <p className="text-zinc-400 text-xs mt-0.5">
-                  {usp.desc}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* الجانب الأيسر: ركائز التميز (USPs Pillar) */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="space-y-2">
+                <span className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.25em] font-extrabold text-[#e6b224] bg-[#df9d17]/10 border border-[#df9d17]/25 px-3.5 py-1.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#df9d17] animate-pulse" />
+                  Engineering Standard
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  Engineered for Grand Scales & High-Impact Events
+                </h3>
+                <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                  Trusted by federal authorities, master developers, and international production teams.
                 </p>
               </div>
+
+              {/* قائمة الـ USPs بدون كروت سميكة - تصميم مسطح فاخر */}
+              <div className="space-y-4 pt-2">
+                {usps.map((usp, idx) => (
+                  <div
+                    key={idx}
+                    className="group flex items-start gap-4 p-3 rounded-xl hover:bg-white/[0.03] transition-all duration-300"
+                  >
+                    <div className="p-2.5 rounded-lg bg-[#df9d17]/10 border border-[#df9d17]/20 text-[#df9d17] group-hover:border-[#df9d17]/50 group-hover:scale-105 transition-all shrink-0">
+                      {usp.icon}
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-mono text-[#df9d17]/80 font-bold">{usp.num}</span>
+                        <h4 className="text-white text-xs sm:text-sm font-semibold tracking-wide group-hover:text-[#e6b224] transition-colors">
+                          {usp.title}
+                        </h4>
+                      </div>
+                      <p className="text-zinc-400 text-[11px] sm:text-xs mt-0.5 leading-relaxed">
+                        {usp.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+
+            {/* الجانب الأيمن: شبكة اللوجوهات الطافية المدمجة (Floating Logos Grid) */}
+            <div className="lg:col-span-7 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10">
+              
+              <div className="mb-5 flex items-center justify-between">
+                <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-semibold text-zinc-400">
+                  Select Enterprise Clients
+                </span>
+                <div className="h-[1px] flex-1 max-w-[120px] bg-gradient-to-r from-white/10 to-transparent ml-4" />
+              </div>
+
+              {/* شبكة اللوجوهات: 3 أعمدة في الموبايل والديسك توب لتوزيع متوازن ومريح */}
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5">
+                {clients.map((client, idx) => (
+                  <div
+                    key={`${client.name}-${idx}`}
+                    className="relative flex items-center justify-center h-[78px] sm:h-[95px] p-3 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#df9d17]/40 hover:bg-white/[0.05] transition-all duration-300 group shadow-sm"
+                  >
+                    <div className="relative w-full h-[45px] sm:h-[55px] flex items-center justify-center">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        sizes="(max-width: 640px) 110px, 160px"
+                        className={`object-contain transition-all duration-300 group-hover:scale-105 ${
+                          client.filterType === "invert"
+                            ? "invert brightness-200 opacity-90 group-hover:opacity-100"
+                            : "opacity-90 group-hover:opacity-100"
+                        }`}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
