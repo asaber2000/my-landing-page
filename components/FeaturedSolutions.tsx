@@ -94,7 +94,7 @@ export default function FeaturedSolutions() {
       {/* هيدر القسم الرئيسي */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 border-b border-white/10 pb-6 max-w-7xl mx-auto">
         <div>
-          <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase block mb-2">
+          <span className="text-[#e6b224] text-xs font-bold tracking-[0.3em] uppercase block mb-2">
             Portfolio Showcase
           </span>
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight font-heading">
@@ -121,7 +121,7 @@ export default function FeaturedSolutions() {
             <span
               className={`h-2 rounded-full transition-all duration-300 ${
                 currentIndex === idx
-                  ? "w-8 sm:w-10 bg-[#D4AF37]"
+                  ? "w-8 sm:w-10 bg-[#df9d17]"
                   : "w-2 bg-white/20 hover:bg-white/40"
               }`}
             />
@@ -147,7 +147,7 @@ export default function FeaturedSolutions() {
               </button>
               <button
                 onClick={nextProject}
-                className="p-2.5 sm:p-3 rounded-xl bg-[#D4AF37] active:scale-95 hover:brightness-110 text-black font-bold transition-all cursor-pointer shadow-lg shadow-[#D4AF37]/20"
+                className="p-2.5 sm:p-3 rounded-xl bg-[#df9d17] active:scale-95 hover:brightness-110 text-black font-bold transition-all cursor-pointer shadow-lg shadow-[#df9d17]/20"
                 aria-label="Next Project"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,7 +176,7 @@ export default function FeaturedSolutions() {
             <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
               Location
             </span>
-            <p className="text-xs sm:text-base font-bold text-[#D4AF37] truncate">{activeProject.location}</p>
+            <p className="text-xs sm:text-base font-bold text-[#e6b224] truncate">{activeProject.location}</p>
           </div>
           <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A] sm:bg-[#0F172A]/80 border border-white/10 sm:backdrop-blur-md">
             <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
@@ -205,7 +205,7 @@ export default function FeaturedSolutions() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
           
           <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 flex flex-col gap-1 sm:gap-2">
-            <span className="text-[10px] sm:text-sm font-bold tracking-[0.2em] text-[#D4AF37] uppercase">
+            <span className="text-[10px] sm:text-sm font-bold tracking-[0.2em] text-[#e6b224] uppercase">
               {activeProject.category}
             </span>
             <h3 className="text-base sm:text-4xl font-bold font-heading text-white leading-tight">
@@ -216,7 +216,7 @@ export default function FeaturedSolutions() {
 
         {/* المواصفات الفنية والنظرة العامة */}
         <div className="bg-[#0F172A] sm:bg-[#0F172A]/60 border border-white/10 p-5 sm:p-8 rounded-3xl sm:backdrop-blur-xl flex flex-col gap-2 sm:gap-3">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37] block">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e6b224] block">
             PROJECT HIGHLIGHTS
           </span>
           <p className="text-slate-200 text-sm sm:text-lg font-light leading-relaxed">

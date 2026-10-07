@@ -5,6 +5,27 @@
   --foreground: #ffffff;
   --font-heading: var(--font-heading-en), var(--font-heading-ar), serif;
   --font-body: var(--font-body-en), var(--font-body-ar), sans-serif;
+  --brand-gold-start: #f3be21;
+  --brand-gold-mid: #e6b224;
+  --brand-gold-end: #c3922e;
+  --brand-gold-accent: #df9d17;
+}
+
+/* كلاسات جاهزة للاستخدام في أي مكان */
+.btn-gold {
+  background: linear-gradient(135deg, #f3be21, #c3922e);
+  color: #070b14;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #e6b224, #b28224);
+  box-shadow: 0 4px 20px rgba(243, 190, 33, 0.35);
+}
+
+.border-brand-gold {
+  border-color: #df9d17;
 }
 
 html {

@@ -45,7 +45,7 @@ export default function Hero() {
 
       {/* الهيدر العلوي */}
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
-        <div className="relative w-36 sm:w-48 lg:w-[420px] h-8 sm:h-10 lg:h-16">
+        <div className="relative w-32 sm:w-44 lg:w-72 h-7 sm:h-9 lg:h-12">
           <img
             src="/iconn.svg"
             alt="Bait Al Nokhada Tents Factory"
@@ -77,19 +77,19 @@ export default function Hero() {
         {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
         <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-zinc-300 font-medium pt-1">
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> 30+ YEARS EXPERIENCE
+            <span className="text-[#df9d17]">✓</span> 30+ YEARS EXPERIENCE
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> RENTAL & PURCHASE
+            <span className="text-[#df9d17]">✓</span> RENTAL & PURCHASE
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> IN-HOUSE MANUFACTURING
+            <span className="text-[#df9d17]">✓</span> IN-HOUSE MANUFACTURING
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#D4AF37]">✓</span> UAE • GCC • WORLDWIDE
+            <span className="text-[#df9d17]">✓</span> UAE • GCC • WORLDWIDE
           </span>
         </div>
 
@@ -134,9 +134,9 @@ export default function Hero() {
           {/* زر الاتصال Call Now */}
           <a
             href="tel:+971558850631"
-            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-black/40 hover:bg-amber-950/40 border border-white/15 hover:border-[#D4AF37]/50 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg hover:scale-105"
+            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-black/40 hover:bg-amber-950/40 border border-white/15 hover:border-[#df9d17]/50 text-white font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg hover:scale-105"
           >
-            <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37] shrink-0" />
+            <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5 text-[#df9d17] shrink-0" />
             <span>Call Now</span>
           </a>
 

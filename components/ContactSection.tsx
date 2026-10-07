@@ -69,12 +69,12 @@ export default function ContactSection() {
           
           {/* عنوان السيكشن */}
           <div>
-            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase block mb-3">
+            <span className="text-[#e6b224] text-xs font-bold tracking-[0.3em] uppercase block mb-3">
               Get In Touch
             </span>
             <h2 className="text-3xl sm:text-5xl lg:text-4xl font-black tracking-tight font-heading leading-tight">
               TELL US WHAT YOU NEED. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A880]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f3be21] via-[#e6b224] to-[#c3922e]  ">
                 WE’LL TAKE IT FROM THERE.
               </span>
             </h2>
@@ -86,24 +86,24 @@ export default function ContactSection() {
           {/* وسائل التواصل المباشرة */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
-              <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#df9d17] shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
               <div className="truncate">
                 <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Phone Inquiries</span>
-                <a href="tel:+971558850631" className="text-xs font-semibold text-white hover:text-[#D4AF37] transition truncate block">
+                <a href="tel:+971558850631" className="text-xs font-semibold text-white hover:text-[#e6b224] transition truncate block">
                   +971 55 885 0631
                 </a>
               </div>
             </div>
 
             <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-[#0F172A]/80 border border-white/10 backdrop-blur-md">
-              <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#df9d17] shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
-              <div className="truncate">
+              <div className="truncate"> 
                 <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">TENDER & SALES INQUIRIES</span>
-                <a href="mailto:dm@baitalnokhada.Com" className="text-xs font-semibold text-white hover:text-[#D4AF37] transition truncate block">
+                <a href="mailto:dm@baitalnokhada.Com" className="text-xs font-semibold text-white hover:text-[#e6b224] transition truncate block">
                   dm@baitalnokhada.Com
                 </a>
               </div>
@@ -112,7 +112,7 @@ export default function ContactSection() {
 
           {/* الفروع الإقليمية */}
           <div className="space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37] block">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e6b224] block">
               Regional Presence & Branches
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -128,10 +128,10 @@ export default function ContactSection() {
                   <div>
                     <div className="flex items-center justify-between gap-1 text-white font-bold text-xs">
                       <div className="flex items-center gap-1.5 truncate">
-                        <MapPin className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
+                        <MapPin className="w-3.5 h-3.5 text-[#df9d17] shrink-0 group-hover:scale-110 transition-transform" />
                         <span className="truncate">{b.city}</span>
                       </div>
-                      <svg className="w-3 h-3 text-slate-500 group-hover:text-[#D4AF37] transition-all shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-3 h-3 text-slate-500 group-hover:text-[#df9d17] transition-all shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
                       </svg>
                     </div>
@@ -172,7 +172,7 @@ export default function ContactSection() {
                   placeholder="Your Name or Company Name" 
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
+                  className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#df9d17] transition"
                 />
               </div>
 
@@ -187,7 +187,7 @@ export default function ContactSection() {
                     placeholder="+971 50 000 0000" 
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
+                    className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#df9d17] transition"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -200,7 +200,7 @@ export default function ContactSection() {
                     placeholder="name@company.com" 
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-                    className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition"
+                    className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#df9d17] transition"
                   />
                 </div>
               </div>
@@ -215,14 +215,14 @@ export default function ContactSection() {
                   placeholder="Mention tent type (e.g. Exhibition, Warehouse), size, location, and rental or purchase needs..." 
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#D4AF37] transition resize-none"
+                  className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-[#df9d17] transition resize-none"
                 />
               </div>
 
               <button 
                 type="submit"
                 disabled={loading}
-                className="mt-2 w-full py-3.5 rounded-xl bg-[#D4AF37] hover:bg-[#c29d30] text-black font-bold text-xs tracking-widest uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
+                className="mt-2 w-full py-3.5 rounded-xl bg-[#df9d17] hover:bg-[#c29d30] text-black font-bold text-xs tracking-widest uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg disabled:opacity-50"
               >
                 <span>{loading ? "SENDING..." : "SUBMIT"}</span>
                 <Send className="w-4 h-4" />
