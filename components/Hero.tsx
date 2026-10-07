@@ -46,8 +46,8 @@ export default function Hero() {
       {/* الهيدر العلوي */}
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
         <div className="relative w-32 sm:w-44 lg:w-72 h-7 sm:h-9 lg:h-12">
-          <img
-            src="/iconn.svg"
+          <img 
+            src="/icon.svg"
             alt="Bait Al Nokhada Tents Factory"
             className="w-full h-full object-contain"
             width={320}
