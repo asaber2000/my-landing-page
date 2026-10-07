@@ -1,5 +1,14 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+
+const scrollToTop = (e: React.MouseEvent) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 export default function Footer() {
   const socials = [
@@ -80,6 +89,7 @@ export default function Footer() {
         <div className="order-1 md:order-2 flex justify-center items-center">
           <Link
             href="/"
+            onClick={scrollToTop}
             className="relative block w-32 sm:w-36 h-7 sm:h-8 opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 cursor-pointer"
             aria-label="Bait Al Nokhada Tents Home"
           >
