@@ -64,7 +64,7 @@ export default function Hero() {
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
         <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
           Need a Custom Tent Solution  <br className="hidden sm:inline" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">
+          <span className="bg-gradient-to-b from-[#f3be21] via-[#e6b224] to-[#c3922e] bg-clip-text text-transparent">
             Engineered to Serve Your Needs?
           </span>
         </h1>
