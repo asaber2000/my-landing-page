@@ -196,33 +196,35 @@ export default function ClientsAndUSPs() {
             <div className="h-6 w-[1px] bg-white/10" />
             <div>
               <span className="block text-lg sm:text-xl font-bold text-[#e6b224] font-sans">5000+</span>
-              <span className="text-[10px] uppercase tracking-wider text-zinc-400">MAJOR PROJECTS DELIVERED</span>
+              <span className="text-[10px] uppercase tracking-wider text-zinc-400">PROJECTS BUILT</span>
             </div>
           </div>
 
 
         </div>
 
-        <div className="lg:hidden mt-6 grid grid-cols-2 gap-2.5 max-w-sm mx-auto">
+        <div className="lg:hidden mt-7 grid grid-cols-2 gap-3 max-w-sm mx-auto">
           {clients.map((client, idx) => (
             <div
               key={`mobile-${client.name}-${idx}`}
-              className="relative flex flex-col items-center justify-center p-3 rounded-2xl bg-[#0c1222]/90 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] overflow-hidden"
+              className="relative flex flex-col items-center justify-center h-[76px] px-3 rounded-2xl bg-[#0c1222]/90 border border-white/10 shadow-[0_8px_25px_rgba(0,0,0,0.6)] overflow-hidden"
             >
-              {/* إيفيكت التوهج الذهبي النبضي الخفيف للموبايل فقط */}
+              {/* شعاع مسح كريستالي متتابع يتحرك دورياً كل 4.5 ثوانٍ */}
               <div 
-                className="absolute inset-0 bg-[#df9d17]/5 rounded-2xl animate-pulse pointer-events-none" 
-                style={{ animationDuration: `${3 + idx * 0.5}s` }} 
+                className="absolute inset-y-0 w-full bg-gradient-to-r from-transparent via-white/[0.08] to-transparent -skew-x-12 pointer-events-none animate-mobile-shimmer"
+                style={{ animationDelay: `${idx * 0.6}s` }}
               />
-              <div className="absolute top-0 inset-x-3 h-[1px] bg-gradient-to-r from-transparent via-[#df9d17]/40 to-transparent" />
 
-              <div className="relative w-24 h-8 flex items-center justify-center z-10">
+              {/* خط ذهبي علوي دقيق ينبض بنعومة بالغة */}
+              <div className="absolute top-0 inset-x-4 h-[1px] bg-gradient-to-r from-transparent via-[#df9d17]/50 to-transparent" />
+
+              <div className="relative w-28 h-9 flex items-center justify-center z-10">
                 <Image
                   src={client.logo}
                   alt={client.name}
                   fill
                   sizes="120px"
-                  className={`object-contain ${
+                  className={`object-contain transition-all duration-300 ${
                     client.scale || "scale-100"
                   } ${
                     client.filterType === "invert"
