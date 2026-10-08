@@ -45,7 +45,7 @@ export default function Hero() {
 
       {/* الهيدر العلوي */}
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
-        <div className="relative w-32 sm:w-44 lg:w-72 h-7 sm:h-9 lg:h-12">
+        <div className="relative w-32 sm:w-40 lg:w-46 h-7 sm:h-9 lg:h-12">
           <img 
             src="/icon.svg"
             alt="Bait Al Nokhada Tents Factory"
@@ -62,7 +62,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-3xl mx-auto text-center space-y-2 sm:space-y-3 my-auto py-2">
 
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
+        <h1 className="text-2xl sm:text-3xl lg:text-3xl font-black tracking-tight leading-tight text-white">
           Need a Custom Tent Solution  <br className="hidden sm:inline" />
           <span className="bg-gradient-to-b from-[#f3be21] via-[#e6b224] to-[#c3922e] bg-clip-text text-transparent">
             Engineered to Serve Your Needs?
@@ -77,20 +77,24 @@ export default function Hero() {
         {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
         <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-zinc-300 font-medium pt-1">
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> 30+ YEARS EXPERIENCE
+            <span className="text-[#df9d17]">✓</span> Rapid Setup & Execution
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> RENTAL & PURCHASE
+            <span className="text-[#df9d17]">✓</span> Cost-Effective vs Concrete
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> IN-HOUSE MANUFACTURING
+            <span className="text-[#df9d17]">✓</span> Fully Relocatable & Modular
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> UAE • GCC • WORLDWIDE
+            <span className="text-[#df9d17]">✓</span> High Wind & Heat Resistance
           </span>
+          <span className="text-zinc-600 hidden sm:inline">•</span>
+          <span className="flex items-center gap-1">
+            <span className="text-[#df9d17]">✓</span> Available For Rent & Sale
+            </span>
         </div>
 
         {/* الأزرار: شبكة سطرين منظمة على الموبايل وصف كامل على الشاشات الأكبر */}
