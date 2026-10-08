@@ -193,7 +193,7 @@ export default function FeaturedSolutions() {
         </div>
 
         {/* حاوية الصورة والاسم */}
-        <div className="relative w-full aspect-[16/9] sm:aspect-[16/9] lg:aspect-[21/10] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-xl">
+        <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] lg:aspect-[26/9] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-xl">
           <Image  
             src={activeProject.img}
             alt={`${activeProject.title} - ${activeProject.category} by Bait Al Nokhada Tents`}
