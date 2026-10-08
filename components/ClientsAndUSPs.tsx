@@ -200,22 +200,31 @@ export default function ClientsAndUSPs() {
             </div>
           </div>
 
+
         </div>
 
-        {/* الموبايل والتابلت المنظم */}
-        <div className="lg:hidden mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2.5 max-w-md mx-auto">
+        <div className="lg:hidden mt-6 grid grid-cols-2 gap-2.5 max-w-sm mx-auto">
           {clients.map((client, idx) => (
             <div
               key={`mobile-${client.name}-${idx}`}
-              className="flex flex-col items-center justify-center p-3 rounded-xl bg-[#0c1222]/90 border border-white/10 shadow-md backdrop-blur-md"
+              className="relative flex flex-col items-center justify-center p-3 rounded-2xl bg-[#0c1222]/90 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] overflow-hidden"
             >
-              <div className="relative w-28 h-8 flex items-center justify-center">
+              {/* إيفيكت التوهج الذهبي النبضي الخفيف للموبايل فقط */}
+              <div 
+                className="absolute inset-0 bg-[#df9d17]/5 rounded-2xl animate-pulse pointer-events-none" 
+                style={{ animationDuration: `${3 + idx * 0.5}s` }} 
+              />
+              <div className="absolute top-0 inset-x-3 h-[1px] bg-gradient-to-r from-transparent via-[#df9d17]/40 to-transparent" />
+
+              <div className="relative w-24 h-8 flex items-center justify-center z-10">
                 <Image
                   src={client.logo}
                   alt={client.name}
                   fill
                   sizes="120px"
                   className={`object-contain ${
+                    client.scale || "scale-100"
+                  } ${
                     client.filterType === "invert"
                       ? "invert brightness-200 opacity-90"
                       : "opacity-85"
