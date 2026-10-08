@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -74,6 +74,16 @@ const projects = [
 
 export default function FeaturedSolutions() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      projects.slice(1).forEach((project) => {
+        const img = new window.Image();
+        img.src = project.img;
+      });
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const prevProject = () => {
     setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
@@ -85,7 +95,7 @@ export default function FeaturedSolutions() {
 
   const activeProject = projects[currentIndex];
   // تجهيز رابط الصورة التالية لتنزيلها بالخلفية بدون إثقال المعالج
-  const allImages = projects.map((p) => p.img);
+  const nextProjectIndex = (currentIndex + 1) % projects.length;
 
 
   return (
@@ -198,7 +208,7 @@ export default function FeaturedSolutions() {
             src={activeProject.img}
             alt={`${activeProject.title} - ${activeProject.category} by Bait Al Nokhada Tents`}
             fill
-            priority
+            priority={currentIndex === 0}
             quality={90}
             sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1920px"
             className="object-cover object-center"
@@ -235,12 +245,6 @@ export default function FeaturedSolutions() {
         ))}
       </div>
       
-      {/* Preload لجميع الصور في الخلفية لضمان التنقل اللحظي بدون شاشة سوداء */}
-      <div className="hidden" aria-hidden="true">
-        {allImages.map((src, i) => (
-          <Image key={i} src={src} alt="" width={10} height={10} priority={true} />
-        ))}
-      </div>
 
     </section>
   );
