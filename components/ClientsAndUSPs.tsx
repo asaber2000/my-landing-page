@@ -88,7 +88,7 @@ function FloatingDesktopLogo({
     >
       <div className="group relative flex flex-col items-center justify-center px-5 py-3.5 rounded-2xl bg-[#0c1222]/95 border border-white/10 hover:border-[#df9d17]/60 shadow-[0_12px_32px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(223,157,23,0.3)] cursor-pointer">
         <div className="absolute top-0 inset-x-4 h-[1px] bg-gradient-to-r from-transparent via-[#df9d17]/40 to-transparent group-hover:via-[#df9d17]" />
-        
+
         {/* تكبير مساحة العرض للوجو */}
         <div className="relative w-32 xl:w-36 h-10 xl:h-12 flex items-center justify-center">
           <Image
@@ -96,13 +96,11 @@ function FloatingDesktopLogo({
             alt={client.name}
             fill
             sizes="160px"
-            className={`object-contain transition-all duration-300 ${
-              client.scale || "scale-100"
-              } ${
-              client.filterType === "invert"
+            className={`object-contain transition-all duration-300 ${client.scale || "scale-100"
+              } ${client.filterType === "invert"
                 ? "invert brightness-200 opacity-90 group-hover:opacity-100"
                 : "opacity-85 group-hover:opacity-100"
-            }`}
+              }`}
           />
         </div>
 
@@ -138,10 +136,10 @@ export default function ClientsAndUSPs() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative py-14 lg:py-24 bg-[#070B14] border-t border-b border-white/5 overflow-hidden select-none flex items-center justify-center"
+      className="relative py-14 lg:py-24 bg-[#070B14] border-t border-b border-white/5 overflow-hidden select-none flex items-center justify-center w-full max-w-full"
     >
       {/* شبكة خلفية ونبض ذهبي محيطي بارز يرفع المحتوى للأمام */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(#df9d17 1px, transparent 1px)`,
@@ -163,10 +161,10 @@ export default function ClientsAndUSPs() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        
+
         {/* المركز الثابت: أضفنا له حاوية ناعمة مضيئة لإلغاء الإحساس بالغرق */}
         <div className="max-w-2xl mx-auto text-center space-y-4 p-6 sm:p-8 rounded-3xl bg-white/[0.02] border border-white/5 shadow-2xl backdrop-blur-sm pointer-events-auto">
-          
+
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#df9d17]/10 border border-[#df9d17]/30 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#df9d17] animate-ping" />
             <span className="text-[10px] font-mono uppercase tracking-[0.25em] font-extrabold text-[#e6b224]">
@@ -210,7 +208,7 @@ export default function ClientsAndUSPs() {
               className="relative flex flex-col items-center justify-center h-[76px] px-3 rounded-2xl bg-[#0c1222]/90 border border-white/10 shadow-[0_8px_25px_rgba(0,0,0,0.6)] overflow-hidden"
             >
               {/* شعاع مسح كريستالي متتابع يتحرك دورياً كل 4.5 ثوانٍ */}
-              <div 
+              <div
                 className="absolute inset-y-0 w-full bg-gradient-to-r from-transparent via-white/[0.08] to-transparent -skew-x-12 pointer-events-none animate-mobile-shimmer"
                 style={{ animationDelay: `${idx * 0.6}s` }}
               />
@@ -224,13 +222,11 @@ export default function ClientsAndUSPs() {
                   alt={client.name}
                   fill
                   sizes="120px"
-                  className={`object-contain transition-all duration-300 ${
-                    client.scale || "scale-100"
-                  } ${
-                    client.filterType === "invert"
+                  className={`object-contain transition-all duration-300 ${client.scale || "scale-100"
+                    } ${client.filterType === "invert"
                       ? "invert brightness-200 opacity-90"
                       : "opacity-85"
-                  }`}
+                    }`}
                 />
               </div>
             </div>
