@@ -62,7 +62,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-3xl mx-auto text-center space-y-2 sm:space-y-3 my-auto py-2">
 
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
-        <h1 className="text-2xl sm:text-3xl lg:text-3xl font-black tracking-tight leading-tight text-white">
+        <h1 className="text-[20px] sm:text-3xl lg:text-3xl font-black tracking-tight leading-tight text-white">
           Need a Custom Tent Solution  <br className="hidden sm:inline" />
           <span className="bg-gradient-to-b from-[#f3be21] via-[#e6b224] to-[#c3922e] bg-clip-text text-transparent">
             Engineered to Serve Your Needs?

@@ -174,7 +174,7 @@ export default function ClientsAndUSPs() {
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug drop-shadow-md">
+          <h2 className="text-[19px] sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug drop-shadow-md">
             Trusted by the Region’s Leading Brands & Sovereign Entities
           </h2>
 

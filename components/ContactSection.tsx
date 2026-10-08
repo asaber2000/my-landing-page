@@ -69,10 +69,10 @@ export default function ContactSection() {
           
           {/* عنوان السيكشن */}
           <div>
-            <span className="text-[#e6b224] text-xs font-bold tracking-[0.3em] uppercase block mb-3">
+            <span className="text-[#e6b224] text-[11px] sm:text-sm font-bold tracking-[0.3em] uppercase block mb-3">
               Get In Touch
             </span>
-            <h2 className="text-3xl sm:text-5xl lg:text-4xl font-black tracking-tight font-heading leading-tight">
+            <h2 className="text-[20px] sm:text-5xl lg:text-4xl font-black tracking-tight font-heading leading-tight">
               TELL US WHAT YOU NEED. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f3be21] via-[#e6b224] to-[#c3922e]  ">
                 WE’LL TAKE IT FROM THERE.
@@ -112,7 +112,7 @@ export default function ContactSection() {
 
           {/* الفروع الإقليمية */}
           <div className="space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#e6b224] block">
+            <span className="text-[11px] sm:text-sm font-bold uppercase tracking-[0.2em] text-[#e6b224] block">
               Regional Presence & Branches
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

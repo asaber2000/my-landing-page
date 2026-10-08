@@ -94,10 +94,10 @@ export default function FeaturedSolutions() {
       {/* هيدر القسم الرئيسي */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 border-b border-white/10 pb-6 max-w-7xl mx-auto">
         <div>
-          <span className="text-[#e6b224] text-xs font-bold tracking-[0.3em] uppercase block mb-2">
+          <span className="text-[#e6b224] text-[11px] sm:text-sm font-bold tracking-[0.3em] uppercase block mb-2">
             Portfolio Showcase
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight font-heading">
+          <h2 className="text-[24px] sm:text-5xl font-black tracking-tight font-heading">
             Featured Projects.
           </h2>
         </div>
@@ -131,7 +131,7 @@ export default function FeaturedSolutions() {
 
           {/* العداد وأزرار الأسهم */}
           <div className="flex items-center gap-4 sm:gap-6">
-            <span className="text-xs sm:text-sm font-mono text-slate-400 select-none">
+            <span className="text-xs sm:text-sm font-mono text-slate-400 whitespace-nowrap shrink-0">
               <span className="text-white font-bold text-sm sm:text-base">0{currentIndex + 1}</span> / 0{projects.length}
             </span>
             
@@ -170,7 +170,7 @@ export default function FeaturedSolutions() {
             <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1 truncate">
               CLIENT NAME
             </span>
-            <p className="text-xs sm:text-base font-bold text-white truncate">{activeProject.client}</p>
+            <p className="text-xs sm:text-base font-bold text-white leading-snug break-words">{activeProject.client}</p>
           </div>
           <div className="p-4 sm:p-5 rounded-2xl bg-[#0F172A] sm:bg-[#0F172A]/80 border border-white/10 sm:backdrop-blur-md">
             <span className="text-[10px] sm:text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
