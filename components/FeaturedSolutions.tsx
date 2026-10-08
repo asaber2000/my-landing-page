@@ -85,7 +85,7 @@ export default function FeaturedSolutions() {
 
   const activeProject = projects[currentIndex];
   // تجهيز رابط الصورة التالية لتنزيلها بالخلفية بدون إثقال المعالج
-  const nextProjectIndex = (currentIndex + 1) % projects.length;
+  const allImages = projects.map((p) => p.img);
 
 
   return (
@@ -193,11 +193,12 @@ export default function FeaturedSolutions() {
         </div>
 
         {/* حاوية الصورة والاسم */}
-        <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] lg:aspect-[28/9] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-xl">
+        <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] lg:aspect-[27/9] rounded-3xl overflow-hidden bg-neutral-900 border border-white/15 shadow-xl">
           <Image  
             src={activeProject.img}
             alt={`${activeProject.title} - ${activeProject.category} by Bait Al Nokhada Tents`}
             fill
+            priority
             quality={90}
             sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1920px"
             className="object-cover object-center"
@@ -234,6 +235,12 @@ export default function FeaturedSolutions() {
         ))}
       </div>
       
+      {/* Preload لجميع الصور في الخلفية لضمان التنقل اللحظي بدون شاشة سوداء */}
+      <div className="hidden" aria-hidden="true">
+        {allImages.map((src, i) => (
+          <Image key={i} src={src} alt="" width={10} height={10} priority={true} />
+        ))}
+      </div>
 
     </section>
   );
