@@ -74,28 +74,42 @@ export default function Hero() {
           Yes, exactly as needed — without compromising on quality or time. From commercial expos and luxury setups to heavy-duty warehouses and all structural applications, we engineer custom event tent and outdoor tent options. As trusted tent suppliers with 30+ years of experience, Bait Al Nokhada offers premium tent rental services and direct sales built for extreme weather. Think Precision. Think Quality.
         </p>
 
-        {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-[#e6b224] font-bold pt-1">
-          <span className="flex items-center gap-1">
-            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Rapid Setup & Execution
-          </span>
-          <span className="text-zinc-600 hidden sm:inline">•</span>
-          <span className="flex items-center gap-1">
-            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Cost-Effective vs Concrete
-          </span>
-          <span className="text-zinc-600 hidden sm:inline">•</span>
-          <span className="flex items-center gap-1">
-            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Fully Relocatable & Modular
-          </span>
-          <span className="text-zinc-600 hidden sm:inline">•</span>
-          <span className="flex items-center gap-1">
-            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> High Wind & Heat Resistance
-          </span>
-          <span className="text-zinc-600 hidden sm:inline">•</span>
-          <span className="flex items-center gap-1">
-            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Available For Rent & Sale
-            </span>
-        </div>
+        {/* نقاط الثقة: شبكة متناسقة (2 في كل صف على الموبايل) وسطراً واحداً على الشاشات الكبيرة */}
+<div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] sm:text-sm text-[#e6b224] font-bold pt-1 max-w-sm sm:max-w-none mx-auto">
+  <span className="flex items-center gap-1.5 justify-start sm:justify-center">
+    <span className="w-3.5 h-3.5 shrink-0 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span>
+    <span className="truncate sm:overflow-visible">Rapid Setup & Execution</span>
+  </span>
+
+  <span className="text-zinc-600 hidden sm:inline">•</span>
+
+  <span className="flex items-center gap-1.5 justify-start sm:justify-center">
+    <span className="w-3.5 h-3.5 shrink-0 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span>
+    <span className="truncate sm:overflow-visible">Cost-Effective vs Concrete</span>
+  </span>
+
+  <span className="text-zinc-600 hidden sm:inline">•</span>
+
+  <span className="flex items-center gap-1.5 justify-start sm:justify-center">
+    <span className="w-3.5 h-3.5 shrink-0 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span>
+    <span className="truncate sm:overflow-visible">Fully Relocatable & Modular</span>
+  </span>
+
+  <span className="text-zinc-600 hidden sm:inline">•</span>
+
+  <span className="flex items-center gap-1.5 justify-start sm:justify-center">
+    <span className="w-3.5 h-3.5 shrink-0 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span>
+    <span className="truncate sm:overflow-visible">High Wind & Heat Resistance</span>
+  </span>
+
+  <span className="text-zinc-600 hidden sm:inline">•</span>
+
+  {/* العنصر الخامس: يأخذ كامل العرض في سطر مستقل بالمنتصف على الموبايل */}
+  <span className="col-span-2 sm:col-auto flex items-center gap-1.5 justify-center">
+    <span className="w-3.5 h-3.5 shrink-0 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span>
+    <span>Available For Rent & Sale</span>
+  </span>
+</div>
 
         {/* الأزرار: شبكة سطرين منظمة على الموبايل وصف كامل على الشاشات الأكبر */}
         {/* الأزرار: تصميم متناسق ومحاذاة في المنتصف على جميع الشاشات */}
