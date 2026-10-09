@@ -163,10 +163,16 @@ export default function Hero() {
       </div>
 
       {/* الشريط المتحرك للحلول */}
-      <div className="relative z-20 w-full -mx-4 sm:-mx-12 lg:-mx-20 px-4 sm:px-12 lg:px-20 pb-2">
+      <div className="relative z-20 w-full pb-2">
         <SolutionsTicker />
       </div>
 
+{/* 
+      الكود القديم للاحتياط:
+      <div className="relative z-20 w-full -mx-4 sm:-mx-12 lg:-mx-20 px-4 sm:px-12 lg:px-20 pb-2">
+        <SolutionsTicker />
+      </div>
+      */}
     </section>
   );
 }
