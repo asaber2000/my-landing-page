@@ -99,7 +99,7 @@ export default function FeaturedSolutions() {
 
 
   return (
-    <section className="relative w-full py-12 sm:py-20 px-4 sm:px-12 lg:px-20 bg-[#070B14] text-white z-20 overflow-hidden">
+    <section className="relative w-full pt-4 sm:pt-10 pb-12 sm:pb-20 px-4 sm:px-12 lg:px-20 bg-[#070B14] text-white z-20 overflow-hidden">
       
       {/* هيدر القسم الرئيسي */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 border-b border-white/10 pb-6 max-w-7xl mx-auto">
