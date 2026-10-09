@@ -1,8 +1,14 @@
 import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
-import FeaturedSolutions from "@/components/FeaturedSolutions";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const FeaturedSolutions = dynamic(() => import("@/components/FeaturedSolutions"), {
+  ssr: true,
+});
+
+const ContactSection = dynamic(() => import("@/components/ContactSection"), {
+  ssr: true,
+});import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import LinkedInPageView from "@/components/LinkedInPageView";
 import OpenAIPageView from "@/components/OpenAIPageView";
