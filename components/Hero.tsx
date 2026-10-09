@@ -79,7 +79,7 @@ export default function Hero() {
   
   {/* السطر الأول على الموبايل */}
   <div className="flex items-center justify-center gap-2 sm:contents">
-    <span className="flex items-center gap-1 shrink-0">
+    <span className="flex items-center gap-1 shrink-0 -translate-x-4 sm:translate-x-0">
       <span className="w-3.5 h-3.5 shrink-0 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span>
       <span>Rapid Setup & Execution</span>
     </span>
