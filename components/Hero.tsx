@@ -75,25 +75,25 @@ export default function Hero() {
         </p>
 
         {/* نقاط الثقة: مصفوفة بسلاسة وبخط 11px للموبايل */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-zinc-300 font-medium pt-1">
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-sm text-[#e6b224] font-bold pt-1">
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> Rapid Setup & Execution
+            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Rapid Setup & Execution
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> Cost-Effective vs Concrete
+            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Cost-Effective vs Concrete
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> Fully Relocatable & Modular
+            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Fully Relocatable & Modular
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> High Wind & Heat Resistance
+            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> High Wind & Heat Resistance
           </span>
           <span className="text-zinc-600 hidden sm:inline">•</span>
           <span className="flex items-center gap-1">
-            <span className="text-[#df9d17]">✓</span> Available For Rent & Sale
+            <span className="w-3.5 h-3.5 rounded-full bg-white/10 border border-white/20 inline-flex items-center justify-center text-[9px] text-white font-bold">✓</span> Available For Rent & Sale
             </span>
         </div>
 
