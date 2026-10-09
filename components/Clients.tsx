@@ -8,12 +8,12 @@ import { LazyMotion, domAnimation, m } from "framer-motion";
 // اللوجوهات المعتمدة
 const clients = [
   { name: "Netflix", logo: "/images/netflix.svg", filterType: "normal", scale: 2 },
-  { name: "Yas Island", logo: "/images/yas-island-logo.avif", filterType: "normal", scale: 1.40 },
-  { name: "ADNOC", logo: "/images/adnoc-logo-updated.svg", filterType: "normal", scale: 1.50 },
-  { name: "Global Village", logo: "/images/global-village-logoo.png", filterType: "invert", scale: 1.65 },
+  { name: "Yas Island", logo: "/images/yas-island-logo.avif", filterType: "normal", scale: 1.30 },
+  { name: "ADNOC", logo: "/images/adnoc-logo-updated.svg", filterType: "normal", scale: 1.40 },
+  { name: "Global Village", logo: "/images/global-village-logoo.png", filterType: "invert", scale: 1.52 },
   { name: "Emaar", logo: "/images/emaar-logoooo.svg", filterType: "normal", scale: 0.9 },
   { name: "Expo City Dubai", logo: "/images/expo.svg", filterType: "invert", scale: 1.65 },
-  { name: "Expo City Dubai", logo: "/images/dwtclogo.svg", filterType: "invert", scale: 1.65 },
+  { name: "Dubai World Trade Centre", logo: "/images/idPWcynFpA_1791554135343.jpeg", filterType: "normal", scale: 1.1 },
   { name: "Expo City Dubai", logo: "/images/DP-WORLD-loogo.svg", filterType: "normal", scale: 2.20 },
   { name: "Expo City Dubai", logo: "/images/dubai-police-logo.svg", filterType: "normal", scale: 1.20 },
 
@@ -40,7 +40,7 @@ export default function ClientsAndUSPs() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
 
               {/* الجانب الأيسر: النص */}
-              <m.div 
+              <m.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
@@ -110,8 +110,8 @@ export default function ClientsAndUSPs() {
 
                       {/* حاوية اللوجو مع تطبيق خاصية scale */}
                       <div
-                        className="relative z-10 w-full h-[36px] sm:h-[42px] flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
-                        style={{ transform: `scale(${client.scale ?? 1})` }}
+                        className="relative z-10 w-full h-[40px] sm:h-[46px] flex items-center justify-center"
+                        style={{ transform: `scale(${(client.scale ?? 1) * 1.05})` }}
                       >
                         <Image
                           src={client.logo}
@@ -119,12 +119,9 @@ export default function ClientsAndUSPs() {
                           fill
                           loading="lazy"
                           sizes="(max-width: 640px) 110px, 140px"
-                          className={`object-contain transition-all duration-300 ${
-                            client.filterType === "invert"
-                              ? "invert brightness-200 opacity-80 group-hover:opacity-100"
-                              : "opacity-80 group-hover:opacity-100"
-                          }`}
-                        />
+                          className={`object-contain transition-all duration-300 ${client.filterType === "white" ? "brightness-0 invert opacity-95" : client.filterType === "invert" ? "invert brightness-150 opacity-80" : "contrast-[1.05] opacity-90"}`}
+
+                        />  
                       </div>
                     </m.div>
                   ))}
