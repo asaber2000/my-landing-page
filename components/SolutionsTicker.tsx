@@ -34,7 +34,7 @@ export default function SolutionsTicker() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none" />
             </div>
 
-            <span className="text-white text-xs sm:text-sm font-bold tracking-wider font-heading group-hover:text-[#D4AF37] transition-colors whitespace-nowrap text-center drop-shadow-md">
+            <span className="text-white text-xs sm:text-base font-bold tracking-wider font-heading group-hover:text-[#D4AF37] transition-colors whitespace-nowrap text-center drop-shadow-md">
               {item.name}
             </span>
           </div>
