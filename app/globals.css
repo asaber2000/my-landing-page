@@ -29,9 +29,8 @@
 }
 
 html {
-  scroll-behavior: auto !important;
   -webkit-text-size-adjust: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -39,12 +38,19 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  overflow-x: clip;
+  overflow-x: hidden;
   max-width: 100%;
   width: 100%;
   position: relative;
-  touch-action: pan-y; /* يمنع أي حركة أفقية على شاشات اللمس تماماً */
   -webkit-font-smoothing: antialiased;
+}
+
+/* تطبيق منع الهزة والارتداد على شاشات الموبايل واللمس فقط دون لمس سكرول الديسكتوب */
+@media (max-width: 768px) {
+  body {
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
