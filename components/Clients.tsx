@@ -11,10 +11,10 @@ const clients = [
   { name: "Yas Island", logo: "/images/yas-island-logo.avif", filterType: "normal", scale: 1.30 },
   { name: "ADNOC", logo: "/images/adnoc-logo-updated.svg", filterType: "normal", scale: 1.40 },
   { name: "Global Village", logo: "/images/global-village-logoo.png", filterType: "invert", scale: 1.52 },
-  { name: "Emaar", logo: "/images/emaar-logoooo.svg", filterType: "normal", scale: 0.9 },
+  { name: "Emaar", logo: "/images/emaar-logoooo.svg", filterType: "normal", scale: 0.8 },
   { name: "Expo City Dubai", logo: "/images/expo.svg", filterType: "invert", scale: 1.65 },
-  { name: "Dubai World Trade Centre", logo: "/images/idPWcynFpA_1791554135343.jpeg", filterType: "normal", scale: 1.1 },
-  { name: "Expo City Dubai", logo: "/images/DP-WORLD-loogo.svg", filterType: "normal", scale: 2.20 },
+  { name: "Dubai World Trade Centre", logo: "/images/hq-dwtc-logo.png", filterType: "normal", scale: 1.03 },
+  { name: "Expo City Dubai", logo: "/images/db-world-new.svg", filterType: "normal", scale: 1 },
   { name: "Expo City Dubai", logo: "/images/dubai-police-logo.svg", filterType: "normal", scale: 1.20 },
 
 ];
