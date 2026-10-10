@@ -16,7 +16,7 @@ const solutions = [
 
 export default function SolutionsTicker() {
   return (
-    <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-x-clip overflow-hidden py-4 bg-transparent backdrop-blur-[2px] border-y border-white/10 z-20">
+    <div className="relative w-full md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] overflow-hidden py-4 bg-transparent backdrop-blur-[2px] border-y border-white/10 z-20 [contain:paint]">
       <div className="flex w-max animate-marquee">
         {[...solutions, ...solutions, ...solutions, ...solutions, ...solutions].map((item, index) => (
           <div

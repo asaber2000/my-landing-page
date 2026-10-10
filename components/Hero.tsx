@@ -22,7 +22,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-[100dvh] lg:h-screen lg:min-h-[700px] flex flex-col justify-between px-4 sm:px-12 lg:px-20 py-3 sm:py-4 overflow-hidden bg-[#070B14]">
+    <section className="relative w-full min-h-screen lg:h-screen lg:min-h-[700px] flex flex-col justify-between px-4 sm:px-12 lg:px-20 py-3 sm:py-4 overflow-hidden bg-[#070B14]">
 
       {/* Background Video Container */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
