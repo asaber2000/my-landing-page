@@ -8,14 +8,15 @@ import { LazyMotion, domAnimation, m } from "framer-motion";
 // اللوجوهات المعتمدة
 const clients = [
   { name: "Netflix", logo: "/images/netflix.svg", filterType: "normal", scale: 2 },
-  { name: "Yas Island", logo: "/images/yas-island-logo.avif", filterType: "normal", scale: 1.30 },
+  { name: "Yas Island", logo: "/images/yas-island-logo.avif", filterType: "normal", scale: 1.20 },
   { name: "ADNOC", logo: "/images/adnoc-logo-updated.svg", filterType: "normal", scale: 1.40 },
   { name: "Global Village", logo: "/images/global-village-logoo.png", filterType: "invert", scale: 1.52 },
   { name: "Emaar", logo: "/images/emaar-logoooo.svg", filterType: "normal", scale: 0.8 },
-  { name: "Expo City Dubai", logo: "/images/expo.svg", filterType: "invert", scale: 1.65 },
+  { name: "Expo City Dubai", logo: "/images/expo.svg", filterType: "invert", scale: 1.55 },
   { name: "Dubai World Trade Centre", logo: "/images/hq-dwtc-logo.png", filterType: "normal", scale: 1.03 },
   { name: "Expo City Dubai", logo: "/images/db-world-new.svg", filterType: "normal", scale: 1 },
   { name: "Expo City Dubai", logo: "/images/dubai-police-logo.svg", filterType: "normal", scale: 1.20 },
+  { name: "New Client", logo: "/images/gitex_global.png", filterType: "invert", scale: 1.20, mobileOnly: true },
 
 ];
 
@@ -100,7 +101,10 @@ export default function ClientsAndUSPs() {
                       }}
                       whileHover={{ y: -4, transition: { duration: 0.2 } }}
                       style={{ willChange: "transform, opacity" }}
-                      className="group relative flex items-center justify-center h-[68px] sm:h-[76px] p-2.5 rounded-xl bg-white/[0.02] border border-white/10 hover:border-[#df9d17]/50 hover:bg-white/[0.05] transition-colors duration-300 overflow-hidden shadow-sm"
+                      className={`group relative items-center justify-center h-[68px] sm:h-[76px] p-2.5 rounded-xl bg-white/[0.02] border border-white/10 hover:border-[#df9d17]/50 hover:bg-white/[0.05] transition-colors duration-300 overflow-hidden shadow-sm" ${
+                        client.mobileOnly ? "flex sm:hidden" : "flex"
+                      }`}
+
                     >
                       {/* إطار مضيء دوار */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
