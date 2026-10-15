@@ -94,7 +94,7 @@ export default function Footer() {
             aria-label="Bait Al Nokhada Tents Home"
           >
             <Image
-              src="/icon.svg" 
+              src="/bait-alnokhada-final-logo-g-w.svg" 
               alt="Bait Al Nokhada Tents Factory Logo"
               fill
               className="object-contain"
