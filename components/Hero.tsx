@@ -44,14 +44,12 @@ export default function Hero() {
       </div>
 
       {/* الهيدر العلوي */}
-      <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
-        <div className="relative w-32 sm:w-48 lg:w-54 h-7 sm:h-9 lg:h-10">
+      <header className="relative z-20 w-full flex items-center justify-center -mt-4 sm:-mt-2">
+        <div className="relative w-64 sm:w-88 lg:w-104 h-16 sm:h-24 lg:h-28 flex items-center justify-center">
           <img 
-            src="/icon.svg"
+            src="/bait-alnokhada-final-logo-g-w.svg"
             alt="Bait Al Nokhada Tents Factory"
-            className="w-full h-full object-contain"
-            width={320}
-            height={56}
+            className="w-full h-full object-contain scale-175 sm:scale-190 lg:scale-200 drop-shadow-md"
             loading="eager"
             fetchPriority="high"
           />

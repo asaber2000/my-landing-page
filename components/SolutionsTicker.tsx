@@ -24,17 +24,19 @@ export default function SolutionsTicker() {
             className="flex flex-col items-center gap-2 px-6 shrink-0 cursor-pointer group"
           >
             <div className="relative w-40 h-24 sm:w-64 sm:h-36 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl group-hover:border-[#D4AF37] transition-all duration-300">
-              <Image 
-                src={item.img} 
-                alt={index < solutions.length ? `${item.name} by Bait Al Nokhada Tents` : ""} 
+              <Image
+                src={item.img}
+                alt={index < solutions.length ? `${item.name} by Bait Al Nokhada Tents` : ""}
                 fill
                 sizes="(max-width: 640px) 170px, (max-width: 1024px) 200px, 250px"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none" />
             </div>
 
-            <span className="text-white text-xs sm:text-base font-bold tracking-wider font-heading group-hover:text-[#D4AF37] transition-colors whitespace-nowrap text-center drop-shadow-md">
+            <span
+              style={{ fontFamily: 'Nasalization, sans-serif' }}
+              className="text-white text-xs sm:text-lg font-bold tracking-wider font-heading group-hover:text-[#D4AF37] transition-colors whitespace-nowrap text-center drop-shadow-md">
               {item.name}
             </span>
           </div>
