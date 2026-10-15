@@ -62,7 +62,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-3xl mx-auto text-center space-y-2 sm:space-y-3 my-auto py-2">
 
         {/* العنوان الرئيسي: يبدأ من text-2xl (24px) للموبايل ويصل لـ 5xl للديسكتوب */}
-        <h1 className="text-[20px] sm:text-3xl lg:text-3xl font-black tracking-tight leading-tight text-white">
+        <h1 className="text-[20px] sm:text-4xl lg:text-4xl font-black tracking-tight leading-tight text-white">
           Need a Custom Tent Solution  <br className="hidden sm:inline" />
           <span className="bg-gradient-to-b from-[#f3be21] via-[#e6b224] to-[#c3922e] bg-clip-text text-transparent">
             Engineered to Serve Your Needs?
@@ -70,12 +70,12 @@ export default function Hero() {
         </h1>
 
         {/* الوصف: text-xs على الموبايل لتوفير المساحة */}
-        <p className="text-xs sm:text-sm lg:text-base text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
+        <p className="text-xs sm:text-lg lg:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md px-2">
           Yes, exactly as needed — without compromising on quality or time. From commercial expos and luxury setups to heavy-duty warehouses and all structural applications, we engineer custom event tent and outdoor tent options. As trusted tent suppliers with 30+ years of experience, Bait Al Nokhada offers premium tent rental services and direct sales built for extreme weather. Think Precision. Think Quality.
         </p>
 
         {/* نقاط الثقة: منسقة بالكامل بدون قطع للجمل */}
-<div className="flex flex-col items-center justify-center gap-1.5 sm:flex-row sm:flex-wrap sm:gap-x-3 sm:gap-y-1 text-[11px] sm:text-sm text-[#e6b224] font-bold pt-1 max-w-md sm:max-w-none mx-auto">
+<div className="flex flex-col items-center justify-center gap-1.5 sm:flex-row sm:flex-wrap sm:gap-x-3 sm:gap-y-1 text-[11px] sm:text-base lg:text-base text-[#e6b224] font-bold pt-1 max-w-md sm:max-w-none mx-auto">
   
   {/* السطر الأول على الموبايل */}
   <div className="flex items-center justify-center gap-2 sm:contents">
