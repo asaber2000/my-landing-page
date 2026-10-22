@@ -47,7 +47,7 @@ export default function Hero() {
       <header className="relative z-20 w-full flex items-center justify-center pt-1 sm:pt-2">
         <div className="relative w-32 sm:w-48 lg:w-54 h-7 sm:h-9 lg:h-10">
           <img 
-            src="/bait-alnokhada-final-logo-g-w.svg"
+            src="/bait-alnokhada-final-logo-g-white.svg"
             alt="Bait Al Nokhada Tents Factory"
             className="w-full h-full object-contain"
             width={320}
